@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     float horizontalMove = 0f; //from -1 to 1
     bool jump = false;
-	bool cover = false;
+	[SerializeField] private bool cover = false;
 
     // Update is called once per frame
     void Update()
