@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: HeavyPose
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: HeavyBones/HeavyHaunch
+    localPosition: {x: -0.9961711, y: -2.6237304, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.6468879, w: 0.76258516}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyBack
+    localPosition: {x: 1.2500045, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.06041734, w: 0.99817324}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyRightArm
+    localPosition: {x: 2.207616, y: 1.2941344, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9833988, w: -0.18145761}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyRightArm/HeavyRightForearm
+    localPosition: {x: 1.2013698, y: 0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.40573904, w: 0.913989}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyLeftArm
+    localPosition: {x: 2.7635121, y: -1.1166182, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.9998026, w: 0.01986893}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyLeftArm/HeavyLeftForearm
+    localPosition: {x: 1.1420759, y: -0.0000002430752, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyRightLeg
+    localPosition: {x: -0.1309509, y: 0.23011084, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9980566, w: 0.06231472}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyRightLeg/HeavyRightFoot
+    localPosition: {x: 0.27963695, y: -0.000000007450581, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyLeftLeg
+    localPosition: {x: -0.029425286, y: -0.2449033, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9930272, w: 0.11788556}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyLeftLeg/HeavyLeftFoot
+    localPosition: {x: 0.30314043, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: HeavyBones/HeavyHaunch/HeavyHead
+    localPosition: {x: 1.6228696, y: -1.0381228, z: 0}
+    localRotation: {x: -0, y: -0, z: -0.0130607765, w: 0.99991477}
+    localScale: {x: 1, y: 1, z: 1}
