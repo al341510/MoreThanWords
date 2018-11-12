@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public static MainMenu instance;
+    /*public static MainMenu instance;
     [SerializeField] private Button load;
     [SerializeField] private Button chapters;
 
@@ -32,12 +32,12 @@ public class MainMenu : MonoBehaviour
             chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
             chapters.interactable = false;
         }
-    }
+    }*/
 
 
     public void PlayGame()
     {
-        SceneManager.LoadScene ("Level1");
+        SceneManager.LoadScene (1);
     }
 
 
@@ -47,22 +47,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit ();
     }
 
-
-    /*public void SaveGame()
+    public void ContinueGame()
     {
-        if (Directory.Exists(Application.persistentDataPath + "/SavedData") == false)
-        {
-            Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
-        }
-
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Create(Application.persistentDataPath + "/SavedData/level.txt");
-        binaryFormatter.Serialize(file, "Game");
-        file.Close();
-    }*/
-
-
-    public void LoadGame()
+        GameController.gameController.Load();
+    }
+    /*public void LoadGame()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         if (File.Exists(Application.persistentDataPath + "/SavedData/level.txt") == true)
@@ -71,5 +60,5 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene((string) binaryFormatter.Deserialize(file));
             file.Close();
         }
-    }
+    }*/
 }

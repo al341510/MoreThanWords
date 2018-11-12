@@ -5,16 +5,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Autosave : MonoBehaviour {
-
+public class Autosave : MonoBehaviour
+{
     private int delay;
-    private string currentScene;
 
 
 	void Awake ()
     {
         delay = 2;
-        currentScene = SceneManager.GetActiveScene().name;
+        GameController.gameController.Save();
+        /*currentScene = x;
         if (Directory.Exists(Application.persistentDataPath + "/SavedData") == false)
         {
             Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
@@ -23,9 +23,9 @@ public class Autosave : MonoBehaviour {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/SavedData/level.txt");
         binaryFormatter.Serialize(file, currentScene);
-        file.Close();
+        file.Close();*/
 
-        if (currentScene == "Level1")
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             StartCoroutine(LoadLevelAfterDelay(delay));
         }
