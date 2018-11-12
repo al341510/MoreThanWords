@@ -1754,10 +1754,14 @@ MonoBehaviour:
   Rb: {fileID: 1609250053}
   runSpeed: 10
   safetyDistance: 1
+  passiveRange: 10
+  detectionRange: 8
+  attackRange: 4
   horizontalMove: 0
   platform: {fileID: 2063122015}
   minX: 0
   maxX: 0
+  player: {fileID: 0}
 --- !u!114 &1609250055
 MonoBehaviour:
   m_ObjectHideFlags: 0

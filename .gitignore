@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+2D stuff/Assets/NPCPatrolMovement.cs.meta
+2D stuff/Assets/NPCPatrolController2D.cs.meta
