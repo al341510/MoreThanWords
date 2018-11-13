@@ -20,9 +20,9 @@ public class GameController : MonoBehaviour
     private string saveLocation;
 
     [HideInInspector] public bool save;
+    //[HideInInspector] public bool noSettings;
 
-    /*public int level;
-    public float masterAudio;
+    /*public float masterAudio;
     public float effectsAudio;
     public float musicAudio;
     public bool fullscreen;
@@ -57,7 +57,13 @@ public class GameController : MonoBehaviour
             load.interactable = false;
             chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
             chapters.interactable = false;
+            //noSettings = true;
         }
+        /*else
+        {
+            noSettings = false;
+            LoadSettings();
+        }*/
     }
 
 
@@ -90,6 +96,30 @@ public class GameController : MonoBehaviour
     }
 
 
+    /*public void SaveAudio(float volume)
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Create(saveLocation);
+
+        PlayerData data = new PlayerData();
+
+        data.masterAudio = volume;
+    }*/
+
+    /*public void SaveSettings(float volume, bool fullscreen, int graphics, int resolution)
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Create(saveLocation);
+
+        PlayerData data = new PlayerData();
+
+        data.masterAudio = volume;
+        data.fullscreen = fullscreen;
+        data.graphics = graphics;
+        data.resolution = resolution;
+    }*/
+
+
     public void Load()
     {
         if (File.Exists(saveLocation) == true)
@@ -112,6 +142,20 @@ public class GameController : MonoBehaviour
             resolutionY = data.resolutionY;*/
         }
     }
+
+
+    /*private void LoadSettings()
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Open(saveLocation, FileMode.Open);
+
+        PlayerData data = (PlayerData)binaryFormatter.Deserialize(file);
+        file.Close();
+
+        data.masterAudio =;
+        Screen.fullScreen = data.fullscreen;
+        QualitySettings.SetQualityLevel (data.graphics);
+    }*/
 
 
     public void Delete()
@@ -161,6 +205,5 @@ public class GameController : MonoBehaviour
     public float musicAudio;
     public bool fullscreen;
     public int graphics;
-    public int resolutionX;
-    public int resolutionY;*/
+    public int resolution;*/
 }
