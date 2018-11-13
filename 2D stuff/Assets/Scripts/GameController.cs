@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
     private string saveLocation;
 
-    public bool save;
+    [HideInInspector] public bool save;
 
     /*public int level;
     public float masterAudio;
