@@ -7,6 +7,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+
+
 public class GameController : MonoBehaviour
 {
     public static GameController gameController;
@@ -15,6 +17,8 @@ public class GameController : MonoBehaviour
     private Button chapters;
 
     private string saveLocation;
+
+    public bool chapterSelected;
 
     /*public int level;
     public float masterAudio;
@@ -29,6 +33,8 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         saveLocation = Application.persistentDataPath + "/PlayerInfo.dat";
+
+        chapterSelected = false;
 
         if (gameController == null)
         {
@@ -46,6 +52,15 @@ public class GameController : MonoBehaviour
             load.interactable = false;
             chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
             chapters.interactable = false;
+        }
+    }
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X) == true)
+        {
+            Delete();
         }
     }
 
@@ -90,6 +105,33 @@ public class GameController : MonoBehaviour
             resolutionX = data.resolutionX;
             resolutionY = data.resolutionY;*/
         }
+    }
+
+
+    public void Delete()
+    {
+        if (File.Exists (saveLocation) == true)
+        {
+            File.Delete(saveLocation);
+        }
+    }
+
+
+    public int CheckLastUnlocked()
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Open(saveLocation, FileMode.Open);
+
+        PlayerData data = (PlayerData)binaryFormatter.Deserialize(file);
+        file.Close();
+
+        return data.level;
+    }
+
+
+    public void UsedChapterSelection ()
+    {
+        chapterSelected = true;
     }
 }
 

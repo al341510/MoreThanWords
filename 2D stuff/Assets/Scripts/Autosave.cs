@@ -5,6 +5,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class Autosave : MonoBehaviour
 {
     private int delay;
@@ -12,8 +14,11 @@ public class Autosave : MonoBehaviour
 
 	void Awake ()
     {
-        delay = 2;
-        GameController.gameController.Save();
+        if (GameController.gameController.chapterSelected == false)
+        {
+            GameController.gameController.Save();
+        }
+        
         /*currentScene = x;
         if (Directory.Exists(Application.persistentDataPath + "/SavedData") == false)
         {
@@ -27,6 +32,8 @@ public class Autosave : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
+            delay = 2;
+
             StartCoroutine(LoadLevelAfterDelay(delay));
         }
     }

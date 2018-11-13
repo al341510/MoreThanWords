@@ -4,11 +4,14 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine;
 
+
+
 public class OptionsMenu : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
     Resolution[] resolutions;
     [SerializeField] private Dropdown resolutionDropdown;
+
 
     private void Start()
     {
@@ -45,6 +48,7 @@ public class OptionsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("volume", volume);
     }
+
 
     public void SetQuality(int qualityIndex)
     {

@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
+
 public class MainMenu : MonoBehaviour
 {
     /*public static MainMenu instance;
@@ -47,10 +49,13 @@ public class MainMenu : MonoBehaviour
         Application.Quit ();
     }
 
+
     public void ContinueGame()
     {
         GameController.gameController.Load();
     }
+
+
     /*public void LoadGame()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
