@@ -113,6 +113,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &145417331
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 443
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 319
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224022158837326786, guid: bd2b7de7f4944f449bf5008beafa394f,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd2b7de7f4944f449bf5008beafa394f, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &351945715
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,12 +770,12 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: -1
   far clip plane: 1000
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: -5
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -697,7 +797,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1812545837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.34, y: -0.52, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

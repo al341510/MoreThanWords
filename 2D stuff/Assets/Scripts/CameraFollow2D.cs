@@ -7,7 +7,7 @@ public class CameraFollow2D : MonoBehaviour
 	public float FollowSpeed = 2f;
 	public Transform Target;
 
-	private void Update()
+	private void LateUpdate()
 	{
 		//huabuhdb
 		Vector3 newPosition = Target.position;
