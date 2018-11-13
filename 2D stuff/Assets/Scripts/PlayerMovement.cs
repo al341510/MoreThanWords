@@ -78,8 +78,8 @@ public class PlayerMovement : MonoBehaviour
 
 		if (Input.GetButtonUp("Cover"))
 		{
-			cover = true;
-			animator.SetBool("IsCovering", true);
+			cover = false;
+			animator.SetBool("IsCovering", false);
 		}
 
     }
