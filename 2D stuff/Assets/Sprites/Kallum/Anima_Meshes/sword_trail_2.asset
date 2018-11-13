@@ -1,0 +1,260 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
+  m_Name: sword_trail_2
+  m_EditorClassIdentifier: 
+  m_ApiVersion: 4
+  m_Sprite: {fileID: 21300000, guid: 0fdff768c60cecf45874e68c0c061e76, type: 3}
+  m_SharedMesh: {fileID: 43273751252279448}
+  pivotPoint: {x: 0, y: 0}
+  texVertices: []
+  edges: []
+  holes: []
+  indices: 
+  bindPoses: []
+  m_SharedMaterials: []
+--- !u!43 &43273751252279448
+Mesh:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: sword_trail_2
+  serializedVersion: 9
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 57
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 21
+    localAABB:
+      m_Center: {x: 1.615, y: 1.3850002, z: 0}
+      m_Extent: {x: 1.7650001, y: 0.9299999, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 02000100000000000100030003000100040004000100050001000600050005000600070006000800070008000900070009000a00070007000a000b000a000c000b000c000d000b000b000d000e000d000f000e000e000f00100010000f00110011000f00120012000f001300140013000f00
+  m_VertexData:
+    serializedVersion: 2
+    m_VertexCount: 21
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 4
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 1
+      offset: 0
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 2
+      offset: 0
+      format: 0
+      dimension: 4
+    - stream: 2
+      offset: 16
+      format: 11
+      dimension: 4
+    m_DataSize: 1696
+    _typelessdata: 8fc255405c8fb23f000000000000000000000000000080bf0000803fd6bc48b600000000000080bfec5158403333a33f000000000000000000000000000080bf0000803f49c592b300000000000080bfec515840ec51a83f000000000000000000000000000080bf0000803feb1f933700000000000080bfe17a4440c3f5d83f000000000000000000000000000080bf0000803f30e3fb3300000000000080bf333333405c8ff23f000000000000000000000000000080bf0000803f611b29b600000000000080bfb81e2540713d0240000000000000000000000000000080bf0000803f22bd393400000000000080bf9a9919401f850b3f000000000000000000000000000080bf0000803ff4baaf3300000000000080bfe17a14405c8f0a40000000000000000000000000000080bf0000803f6c13423400000000000080bfd7a31040cdf5e83e000000000000000000000000000080bf0000803f09f5673400000000000080bf7b140e40cdf5e83e000000000000000000000000000080bf0000803f35e047b400000000000080bfe17a04401f850b3f000000000000000000000000000080bf0000803f947cea3200000000000080bfec51f83f3d0a0f40000000000000000000000000000080bf0000803fa4396ab400000000000080bf85ebf13f48e11a3f000000000000000000000000000080bf0000803f7365643400000000000080bf14aea73f5c8f223f000000000000000000000000000080bf0000803fd9c4eeb200000000000080bf1f858b3ff6281440000000000000000000000000000080bf0000803ff75615b400000000000080bf8fc2f53c5c8f223f000000000000000000000000000080bf0000803f343c313300000000000080bfb81e05bef6281440000000000000000000000000000080bf0000803f706c9db200000000000080bf295c0fbe713d1240000000000000000000000000000080bf0000803ff1b486b600000000000080bf295c0fbed2a3503f000000000000000000000000000080bf0000803f94fe633500000000000080bf9a9919be7b144e3f000000000000000000000000000080bf0000803f2018d7b500000000000080bf9a9919be713d2a3f000000000000000000000000000080bf0000803f047e3f3400000000000080bf00000000000000006cc1763f1ef62d3f832d783ffa012a3f832d783f5b532b3fd3276d3f77d8373f398e633f5d6f3e3fbcbb5b3f310c433f5655553fccf4113f287d523fad54473f065b503fb2fd0e3fefee4e3fb2fd0e3f9a99493fccf4113f50fa443f17a3493f3433433fdeee133fea932e3fe7eb143f6cc1263fd9454c3f1111013fe7eb143f6cc1f63ed9454c3f610bf63ed0484b3f610bf63e1cda1a3f5655f53ec4851a3f5655f53ef0e8153f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 1.615, y: 1.3850002, z: 0}
+    m_Extent: {x: 1.7650001, y: 0.9299999, z: 0}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimized: 0
+--- !u!114 &114939698474249114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e715ea371f114f4a8d2584ad476634d, type: 3}
+  m_Name: sword_trail_2_Data
+  m_EditorClassIdentifier: 
+  m_PivotPoint: {x: 360, y: 388.5}
+  m_Vertices:
+  - {x: 694, y: 528}
+  - {x: 698, y: 516}
+  - {x: 698, y: 520}
+  - {x: 667, y: 558}
+  - {x: 640, y: 578}
+  - {x: 618, y: 592}
+  - {x: 600, y: 443}
+  - {x: 592, y: 605}
+  - {x: 586, y: 434.00003}
+  - {x: 582, y: 434.00003}
+  - {x: 567, y: 443}
+  - {x: 554, y: 612}
+  - {x: 549, y: 449}
+  - {x: 491, y: 452}
+  - {x: 469, y: 620}
+  - {x: 363, y: 452}
+  - {x: 347, y: 620}
+  - {x: 346, y: 617}
+  - {x: 346, y: 469.99997}
+  - {x: 345, y: 469}
+  - {x: 345, y: 455}
+  m_BoneWeights: []
+  m_Edges:
+  - index1: 20
+    index2: 19
+  - index1: 18
+    index2: 19
+  - index1: 20
+    index2: 15
+  - index1: 17
+    index2: 18
+  - index1: 16
+    index2: 17
+  - index1: 14
+    index2: 16
+  - index1: 11
+    index2: 14
+  - index1: 13
+    index2: 15
+  - index1: 7
+    index2: 11
+  - index1: 12
+    index2: 13
+  - index1: 10
+    index2: 12
+  - index1: 5
+    index2: 7
+  - index1: 9
+    index2: 10
+  - index1: 8
+    index2: 9
+  - index1: 6
+    index2: 8
+  - index1: 4
+    index2: 5
+  - index1: 1
+    index2: 6
+  - index1: 3
+    index2: 4
+  - index1: 0
+    index2: 3
+  - index1: 2
+    index2: 0
+  - index1: 2
+    index2: 1
+  m_Holes: []
+  m_Indices: 14000000130000000f000000120000000f00000013000000110000000f00000012000000100000000f000000110000000e0000000f000000100000000d0000000f0000000e0000000b0000000d0000000e0000000c0000000d0000000b0000000a0000000c0000000b000000070000000a0000000b000000090000000a00000007000000080000000900000007000000060000000800000007000000050000000600000007000000010000000600000005000000040000000100000005000000030000000100000004000000000000000100000003000000020000000100000000000000
+  m_BindPoses: []
+  m_Blendshapes: []

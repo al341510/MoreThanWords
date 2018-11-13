@@ -15,18 +15,29 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f; //from -1 to 1
     bool jump = false;
 	[SerializeField] private bool cover = false;
+	private float comboCD = 0.3f;
+	private float comboTime; 
+	private float comboTime2;
+	private bool isAttacking = false;
+
+	void Start()
+	{
+		comboTime = comboCD;
+	}
 
     // Update is called once per frame
     void Update()
-    {		
+    {	
 		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
 		animator.SetFloat("VelocityY",Rb.velocity.y); //detects the Y speed for jump animation
 
+		bool attackButton = Input.GetButtonDown("Attack");
+		bool jumpButton = Input.GetButtonDown("Jump");
+
 		if (!cover)
-		{
-			
-			if (Input.GetButtonDown("Jump"))
+		{			
+			if (jumpButton)
 			{
 				jump = true;
 				//IsJumping = true
@@ -37,17 +48,42 @@ public class PlayerMovement : MonoBehaviour
 				cover = true;
 				animator.SetBool("IsCovering", true);
 			}
+
+			if (attackButton) //if press attack
+			{
+				isAttacking = true;
+				if (isAttacking)
+				{
+					animator.SetBool("AttackCombo", true);
+					comboTime = comboCD;
+				}						
+				animator.SetBool("Attacking", true);
+
+			}
+			else 
+				animator.SetBool("Attacking", false);
+		
+			if (comboTime > 0 && isAttacking)
+			{
+				comboTime -= Time.deltaTime;
+			} 
+			else
+			{
+				comboTime = comboCD;
+				animator.SetBool("AttackCombo", false);	
+				isAttacking = false;
+			}
 		}
 
 		if (Input.GetButtonUp("Cover"))
 		{
-			cover = false;
-			animator.SetBool("IsCovering", false);
+			cover = true;
+			animator.SetBool("IsCovering", true);
 		}
 
     }
 
-    void FixedUpdate() ////no se llama cada frame sino X veces por segundo
+    void FixedUpdate() 
     {
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
