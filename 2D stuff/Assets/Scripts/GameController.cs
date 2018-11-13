@@ -13,12 +13,13 @@ public class GameController : MonoBehaviour
 {
     public static GameController gameController;
 
-    private Button load;
-    private Button chapters;
+    [SerializeField] private GameObject mainMenu, optionsMainMenu, chaptersMainMenu;
+
+    private Button load, chapters;
 
     private string saveLocation;
 
-    public bool chapterSelected;
+    public bool save;
 
     /*public int level;
     public float masterAudio;
@@ -34,7 +35,11 @@ public class GameController : MonoBehaviour
     {
         saveLocation = Application.persistentDataPath + "/PlayerInfo.dat";
 
-        chapterSelected = false;
+        save = true;
+
+        mainMenu.SetActive(true);
+        optionsMainMenu.SetActive(false);
+        chaptersMainMenu.SetActive(false);
 
         if (gameController == null)
         {
@@ -95,6 +100,7 @@ public class GameController : MonoBehaviour
             PlayerData data = (PlayerData)binaryFormatter.Deserialize(file);
             file.Close();
 
+            save = true;
             SceneManager.LoadScene(data.level);
             /*level = data.level;
             masterAudio = data.masterAudio;
@@ -113,6 +119,10 @@ public class GameController : MonoBehaviour
         if (File.Exists (saveLocation) == true)
         {
             File.Delete(saveLocation);
+            load = GameObject.Find("ContinueBut").GetComponent<Button>();
+            load.interactable = false;
+            chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
+            chapters.interactable = false;
         }
     }
 
@@ -131,7 +141,13 @@ public class GameController : MonoBehaviour
 
     public void UsedChapterSelection ()
     {
-        chapterSelected = true;
+        save = false;
+    }
+
+
+    public void NormalPlay()
+    {
+        save = true;
     }
 }
 

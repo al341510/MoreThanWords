@@ -39,7 +39,14 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        GameController.gameController.NormalPlay();
         SceneManager.LoadScene (1);
+    }
+
+
+    public void ContinueGame()
+    {
+        GameController.gameController.Load();
     }
 
 
@@ -47,12 +54,6 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit ();
-    }
-
-
-    public void ContinueGame()
-    {
-        GameController.gameController.Load();
     }
 
 

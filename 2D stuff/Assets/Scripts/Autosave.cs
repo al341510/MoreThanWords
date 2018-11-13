@@ -14,7 +14,7 @@ public class Autosave : MonoBehaviour
 
 	void Awake ()
     {
-        if (GameController.gameController.chapterSelected == false)
+        if (GameController.gameController.save == true)
         {
             GameController.gameController.Save();
         }
