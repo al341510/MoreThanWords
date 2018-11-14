@@ -44,22 +44,21 @@ public class PlayerMovement : MonoBehaviour
 				//IsJumping = true
 			}
 
-			if (Input.GetButtonDown("Cover"))
+			if (Input.GetButtonDown("Cover") && horizontalMove == 0 && Rb.velocity.y == 0)
 			{
 				cover = true;
 				animator.SetBool("IsCovering", true);
 			}
 
 			if (attackButton) //if press attack
-			{
-				isAttacking = true;
+			{				
+				isAttacking = true;							
+				animator.SetBool("Attacking", true);
 				if (isAttacking)
 				{
 					animator.SetBool("AttackCombo", true);
 					comboTime = comboCD;
-				}						
-				animator.SetBool("Attacking", true);
-
+				}
 			}
 			else 
 				animator.SetBool("Attacking", false);
@@ -76,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 
-		if (Input.GetButtonUp("Cover"))
+		if (Input.GetButtonUp("Cover") && cover)
 		{
 			cover = false;
 			animator.SetBool("IsCovering", false);
