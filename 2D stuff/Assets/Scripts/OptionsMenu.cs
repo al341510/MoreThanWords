@@ -12,6 +12,10 @@ public class OptionsMenu : MonoBehaviour
     Resolution[] resolutions;
     [SerializeField] private Dropdown resolutionDropdown;
 
+    /*private float volumeSave;
+    private bool fullscreenSave;
+    private int graphicsSave, resolutionSave;*/
+
 
     private void Start()
     {
@@ -28,12 +32,18 @@ public class OptionsMenu : MonoBehaviour
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentResolution = i;
+                //resolutionSave = i;
             }
         }
 
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolution;
         resolutionDropdown.RefreshShownValue();
+
+        /*if (GameController.gameController.noSettings == true)
+        {
+            CreateDefault();
+        }*/
     }
 
 
@@ -47,17 +57,33 @@ public class OptionsMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        //volumeSave = volume;
     }
 
 
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        //graphicsSave = qualityIndex;
     }
 
 
     public void SetFullscreen(bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
+        //fullscreenSave = fullscreen;
     }
+
+
+    /*public void SaveChanges()
+    {
+        GameController.gameController.SaveSettings(volumeSave, fullscreenSave, graphicsSave, resolutionSave);
+    }
+
+
+    private void CreateDefault()
+    {
+        GameController.gameController.SaveSettings(0f, Screen.fullScreen, 3, resolutionSave);
+    }*/
 }
+
