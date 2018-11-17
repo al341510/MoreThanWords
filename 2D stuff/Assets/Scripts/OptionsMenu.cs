@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System;
 using UnityEngine;
 
 
@@ -12,17 +15,21 @@ public class OptionsMenu : MonoBehaviour
     Resolution[] resolutions;
     [SerializeField] private Dropdown resolutionDropdown;
 
-    /*private float volumeSave;
+    private string settingsLocation;
+
     private bool fullscreenSave;
-    private int graphicsSave, resolutionSave;*/
+    private int resolutionSave, graphicsSave;
+    private float volumeSave;
 
 
-    private void Start()
+    void Awake()
     {
+        settingsLocation = Application.persistentDataPath + "/Settings.dat";
+
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
         List<string> options = new List<string>();
-        int currentResolution = 0;
+        resolutionSave = 0;
 
         for (int i = 0; i < resolutions.Length; i += 1)
         {
@@ -31,47 +38,120 @@ public class OptionsMenu : MonoBehaviour
 
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
-                currentResolution = i;
-                //resolutionSave = i;
+                resolutionSave = i;
             }
         }
 
         resolutionDropdown.AddOptions(options);
-        resolutionDropdown.value = currentResolution;
+        resolutionDropdown.value = resolutionSave;
         resolutionDropdown.RefreshShownValue();
 
         /*if (GameController.gameController.noSettings == true)
         {
-            CreateDefault();
+            DefaultSettings ();
         }*/
+
+        if (File.Exists (settingsLocation) == false)
+        {
+            CreateDefault ();
+        }
+        else
+        {
+            LoadSettings ();
+        }
     }
 
 
-    public void SetResolution(int resolutionIndex)
+    private void CreateDefault ()
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        BinaryFormatter binaryFormatter = new BinaryFormatter ();
+        PlayerSettings data = new PlayerSettings ();
+        FileStream file = File.Create (settingsLocation);
+
+        data.fullscreen = Screen.fullScreen;
+        data.resolution = resolutionSave;
+        audioMixer.GetFloat ("volume", out data.masterAudio);
+        data.graphics = QualitySettings.GetQualityLevel ();
+
+        binaryFormatter.Serialize (file, data);
+        file.Close ();
     }
 
 
-    public void SetVolume(float volume)
+    private void LoadSettings ()
     {
-        audioMixer.SetFloat("volume", volume);
-        //volumeSave = volume;
-    }
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileStream file = File.Open (settingsLocation, FileMode.Open);
+        PlayerSettings data = (PlayerSettings) binaryFormatter.Deserialize (file);
+        file.Close ();
 
+        SetFullscreen (data.fullscreen);
+        SetResolution (data.resolution);
+        SetVolume (data.masterAudio);
+        SetQuality (data.graphics);
 
-    public void SetQuality(int qualityIndex)
-    {
-        QualitySettings.SetQualityLevel(qualityIndex);
-        //graphicsSave = qualityIndex;
+        Debug.Log(data.fullscreen);
+        Debug.Log(data.resolution);
+        Debug.Log(data.masterAudio);
+        Debug.Log(data.graphics);
     }
 
 
     public void SetFullscreen(bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
-        //fullscreenSave = fullscreen;
+
+        fullscreenSave = fullscreen;
+    }
+
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution;
+        if (resolutionIndex < resolutions.Length)
+        {
+            resolution = resolutions[resolutionIndex];
+        }
+        else
+        {
+            resolutionIndex = 0;
+            resolution = resolutions[resolutionIndex];
+        }
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        resolutionSave = resolutionIndex;
+    }
+
+
+    public void SetVolume (float volume)
+    {
+        audioMixer.SetFloat ("volume", volume);
+
+        volumeSave = volume;
+    }
+
+
+    public void SetQuality (int qualityIndex)
+    {
+        QualitySettings.SetQualityLevel (qualityIndex);
+
+        graphicsSave = qualityIndex;
+    }
+
+
+    public void SaveChanges ()
+    {
+        BinaryFormatter binaryFormatter = new BinaryFormatter ();
+        PlayerSettings data = new PlayerSettings ();
+        FileStream file = File.Create (settingsLocation);
+
+        data.fullscreen = fullscreenSave;
+        data.resolution = resolutionSave;
+        data.masterAudio = volumeSave;
+        data.graphics = graphicsSave;
+
+        binaryFormatter.Serialize (file, data);
+        file.Close ();
     }
 
 
@@ -85,5 +165,14 @@ public class OptionsMenu : MonoBehaviour
     {
         GameController.gameController.SaveSettings(0f, Screen.fullScreen, 3, resolutionSave);
     }*/
+}
+
+
+
+[Serializable] class PlayerSettings
+{
+    public bool fullscreen;
+    public int resolution, graphics;
+    public float masterAudio;
 }
 

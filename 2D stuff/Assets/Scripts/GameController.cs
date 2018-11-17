@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     private Button load, chapters;
 
     private string saveLocation;
+    //private string settingsLocation;
 
     [HideInInspector] public bool save;
     //[HideInInspector] public bool noSettings;
@@ -33,10 +34,12 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        saveLocation = Application.persistentDataPath + "/PlayerInfo.dat";
+        saveLocation = Application.persistentDataPath + "/Level.dat";
+        //settingsLocation = Application.persistentDataPath + "Settings.dat";
 
         save = true;
 
+        optionsMainMenu.SetActive(true);
         mainMenu.SetActive(true);
         optionsMainMenu.SetActive(false);
         chaptersMainMenu.SetActive(false);
@@ -64,6 +67,11 @@ public class GameController : MonoBehaviour
             noSettings = false;
             LoadSettings();
         }*/
+
+        /*if (File.Exists(settingsLocation) == false)
+        {
+            noSettings = true;
+        }*/
     }
 
 
@@ -81,8 +89,6 @@ public class GameController : MonoBehaviour
         BinaryFormatter binaryFormatter = new BinaryFormatter ();
         FileStream file = File.Create (saveLocation);
 
-        PlayerData data = new PlayerData();
-        data.level = SceneManager.GetActiveScene().buildIndex;
         /*data.masterAudio = masterAudio;
         data.effectsAudio = masterAudio;
         data.musicAudio = masterAudio;
@@ -91,7 +97,7 @@ public class GameController : MonoBehaviour
         data.resolutionX = resolutionX;
         data.resolutionY = resolutionY;*/
 
-        binaryFormatter.Serialize(file, data);
+        binaryFormatter.Serialize(file, SceneManager.GetActiveScene().buildIndex);
         file.Close();
     }
 
@@ -127,11 +133,10 @@ public class GameController : MonoBehaviour
             BinaryFormatter binaryFormatter = new BinaryFormatter ();
             FileStream file = File.Open(saveLocation, FileMode.Open);
 
-            PlayerData data = (PlayerData)binaryFormatter.Deserialize(file);
-            file.Close();
-
             save = true;
-            SceneManager.LoadScene(data.level);
+
+            SceneManager.LoadScene((int) binaryFormatter.Deserialize(file));
+            file.Close();
             /*level = data.level;
             masterAudio = data.masterAudio;
             effectsAudio = data.effectsAudio;
@@ -174,12 +179,12 @@ public class GameController : MonoBehaviour
     public int CheckLastUnlocked()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
-        FileStream file = File.Open(saveLocation, FileMode.Open);
+        FileStream file = File.Open (saveLocation, FileMode.Open);
 
-        PlayerData data = (PlayerData)binaryFormatter.Deserialize(file);
+        int last = (int) binaryFormatter.Deserialize(file);
         file.Close();
 
-        return data.level;
+        return last;
     }
 
 
@@ -193,17 +198,4 @@ public class GameController : MonoBehaviour
     {
         save = true;
     }
-}
-
-
-
-[Serializable] class PlayerData
-{
-    public int level;
-    /*public float masterAudio;
-    public float effectsAudio;
-    public float musicAudio;
-    public bool fullscreen;
-    public int graphics;
-    public int resolution;*/
 }
