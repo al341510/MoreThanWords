@@ -26,53 +26,53 @@ public class PauseMenu : MonoBehaviour
         {
             if (paused == true)
             {
-                Resume();
+                Resume ();
             }
             else
             {
-                Pause();
+                Pause ();
             }
         }
 	}
 
 
-    public void Resume()
+    public void Resume ()
     {
-        pauseMenu.SetActive(false);
-        mainPauseMenu.SetActive(false);
-        optionsPauseMenu.SetActive(false);
+        pauseMenu.SetActive (false);
+        mainPauseMenu.SetActive (false);
+        optionsPauseMenu.SetActive (false);
         Time.timeScale = 1f;
         paused = false;
     }
 
 
-    private void Pause()
+    private void Pause ()
     {
-        pauseMenu.SetActive(true);
-        mainPauseMenu.SetActive(true);
-        optionsPauseMenu.SetActive(false);
+        pauseMenu.SetActive (true);
+        mainPauseMenu.SetActive (true);
+        optionsPauseMenu.SetActive (false);
         Time.timeScale = 0f;
         paused = true;
     }
 
 
-    public void RestartLevel()
+    public void RestartLevel ()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
     }
 
 
-    public void LoadMenu()
+    public void LoadMenu ()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene (0);
     }
 
 
-    public void QuitGame()
+    public void QuitGame ()
     {
-        Debug.Log("Quit");
-        Application.Quit();
+        Debug.Log ("Quit");
+        Application.Quit ();
     }
 }

@@ -12,8 +12,12 @@ using UnityEngine;
 public class OptionsMenu : MonoBehaviour
 {
     [SerializeField] private AudioMixer audioMixer;
+
     Resolution[] resolutions;
-    [SerializeField] private Dropdown resolutionDropdown;
+
+    [SerializeField] private Toggle fullscreenToggle;
+    [SerializeField] private Dropdown resolutionDropdown, graphicsDropdown;
+    [SerializeField] private Slider volumeSlider;
 
     private string settingsLocation;
 
@@ -25,6 +29,8 @@ public class OptionsMenu : MonoBehaviour
     void Awake()
     {
         settingsLocation = Application.persistentDataPath + "/Settings.dat";
+
+        PlayerSettings adjustments = new PlayerSettings();
 
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
@@ -53,32 +59,39 @@ public class OptionsMenu : MonoBehaviour
 
         if (File.Exists (settingsLocation) == false)
         {
-            CreateDefault ();
+            adjustments = CreateDefault ();
         }
         else
         {
-            LoadSettings ();
+            adjustments = LoadSettings ();
         }
+
+        MatchSettings (adjustments);
     }
 
 
-    private void CreateDefault ()
+    private PlayerSettings CreateDefault ()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter ();
         PlayerSettings data = new PlayerSettings ();
         FileStream file = File.Create (settingsLocation);
 
         data.fullscreen = Screen.fullScreen;
+        fullscreenSave = data.fullscreen;
         data.resolution = resolutionSave;
         audioMixer.GetFloat ("volume", out data.masterAudio);
+        volumeSave = data.masterAudio;
         data.graphics = QualitySettings.GetQualityLevel ();
+        graphicsSave = data.graphics;
 
         binaryFormatter.Serialize (file, data);
         file.Close ();
+
+        return data;
     }
 
 
-    private void LoadSettings ()
+    private PlayerSettings LoadSettings ()
     {
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Open (settingsLocation, FileMode.Open);
@@ -94,10 +107,23 @@ public class OptionsMenu : MonoBehaviour
         Debug.Log(data.resolution);
         Debug.Log(data.masterAudio);
         Debug.Log(data.graphics);
+
+        return data;
     }
 
 
-    public void SetFullscreen(bool fullscreen)
+    private void MatchSettings (PlayerSettings adjustments)
+    {
+        fullscreenToggle.isOn = adjustments.fullscreen;
+        resolutionDropdown.value = adjustments.resolution;
+        resolutionDropdown.RefreshShownValue ();
+        volumeSlider.value = adjustments.masterAudio;
+        graphicsDropdown.value = adjustments.graphics;
+        graphicsDropdown.RefreshShownValue();
+    }
+
+
+    public void SetFullscreen (bool fullscreen)
     {
         Screen.fullScreen = fullscreen;
 
@@ -105,7 +131,7 @@ public class OptionsMenu : MonoBehaviour
     }
 
 
-    public void SetResolution(int resolutionIndex)
+    public void SetResolution (int resolutionIndex)
     {
         Resolution resolution;
         if (resolutionIndex < resolutions.Length)
@@ -117,7 +143,7 @@ public class OptionsMenu : MonoBehaviour
             resolutionIndex = 0;
             resolution = resolutions[resolutionIndex];
         }
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        Screen.SetResolution (resolution.width, resolution.height, Screen.fullScreen);
 
         resolutionSave = resolutionIndex;
     }

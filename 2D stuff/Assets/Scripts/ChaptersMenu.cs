@@ -11,7 +11,6 @@ using UnityEngine;
 public class ChaptersMenu : MonoBehaviour
 {
     private Button chapter2;
-    BinaryFormatter binaryFormatter = new BinaryFormatter();
 
 
     void Awake()
@@ -29,16 +28,4 @@ public class ChaptersMenu : MonoBehaviour
         GameController.gameController.UsedChapterSelection();
         SceneManager.LoadScene (level);
     }
-
-
-    /*public void LoadLevel1()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-
-    public void LoadLevel2()
-    {
-        SceneManager.LoadScene(2);
-    }*/
 }
