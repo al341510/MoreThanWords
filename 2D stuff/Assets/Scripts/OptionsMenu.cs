@@ -102,12 +102,12 @@ public class OptionsMenu : MonoBehaviour
         SetResolution (data.resolution);
         SetVolume (data.masterAudio);
         SetQuality (data.graphics);
-
+		/*
         Debug.Log(data.fullscreen);
         Debug.Log(data.resolution);
         Debug.Log(data.masterAudio);
         Debug.Log(data.graphics);
-
+		*/
         return data;
     }
 
