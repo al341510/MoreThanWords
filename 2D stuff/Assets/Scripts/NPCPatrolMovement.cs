@@ -37,6 +37,12 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     RaycastHit2D linecast;
 
+    [SerializeField] private bool attacking;
+
+    public float attack_cooldown = 1.1f;
+
+    float timer;
+
     void Start () {
 
         /*float centerX = platform.GetComponent<BoxCollider2D>().bounds.center.x;
@@ -56,6 +62,9 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     private void Awake()
     {
+        timer = attack_cooldown;
+        attacking = false;
+
         float centerX = platform.GetComponent<BoxCollider2D>().bounds.center.x;
         float width = platform.transform.localScale.x * platform.GetComponent<BoxCollider2D>().size.x; // Utiliza el tamaño del collider y la escala que se le aplica para averiguar la anchura de la plataforma InGame
 
@@ -105,7 +114,7 @@ public class NPCPatrolMovement : MonoBehaviour {
         }
         if (status == "combat")
         {
-            if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > detectionRange)
+            if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > attackRange && this.transform.position.x - safetyDistance > minX && this.transform.position.x + safetyDistance < maxX)
             {
                 if (this.transform.position.x - player.transform.position.x <  0)
                 {
@@ -118,14 +127,32 @@ public class NPCPatrolMovement : MonoBehaviour {
             }
             else
             {
+                //RANGO DE ESPERA O ATAQUE -> SE QUEDA QUIETO
                 horizontalMove = 0;
+                //MIRA HACIA EL PLAYER
+                controller.LookPlayer(this.transform.position.x, player.transform.position.x);
                 //HAY CONTACTO VISUAL ENTRE EL ARQUERO Y EL JUGADOR
                 linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1<<9));
                 if(linecast.collider.gameObject.name == "Kallum")
                 {
-                    //Debug.Log("contacto");
-                    // AQUI SE LLAMARÁ AL ATAQUE DE NPC_PATROL_CONTROLLER_2D
+                    if (!attacking && Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < attackRange)
+                    {
+                        attacking = true;
+                        animator.SetBool("Attack", attacking);
+                    }
                 }
+            }
+        }
+
+        if (attacking)
+        {
+            horizontalMove = 0;
+            timer -= Time.fixedDeltaTime;
+            if (timer<= 0)
+            {
+                attacking = false;
+                animator.SetBool("Attack", attacking);
+                timer = attack_cooldown;
             }
         }
         controller.Move(horizontalMove * Time.fixedDeltaTime * runSpeed);

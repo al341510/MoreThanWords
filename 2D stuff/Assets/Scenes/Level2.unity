@@ -1284,6 +1284,8 @@ MonoBehaviour:
   minX: 0
   maxX: 0
   player: {fileID: 0}
+  attacking: 0
+  attack_cooldown: 1.1
 --- !u!114 &1609250055
 MonoBehaviour:
   m_ObjectHideFlags: 0

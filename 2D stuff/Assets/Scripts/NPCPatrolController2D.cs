@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,5 +49,17 @@ public class NPCPatrolController2D : MonoBehaviour {
         // Switch the way the player is labelled as facing.
         m_FacingRight = !m_FacingRight;
         transform.Rotate(0, -180, 0);
+    }
+
+    internal void LookPlayer(float xArquero, float xPlayer)
+    {
+        if (xArquero > xPlayer && m_FacingRight)
+        {
+            Flip();
+        }
+        else if (xArquero < xPlayer && !m_FacingRight)
+        {
+            Flip();
+        }
     }
 }
