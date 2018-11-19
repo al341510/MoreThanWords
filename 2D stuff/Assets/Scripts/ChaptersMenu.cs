@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -14,19 +13,19 @@ public class ChaptersMenu : MonoBehaviour
     private Button chapter2;
 
 
-    void Start ()
+    void Awake()
     {
-        if (GameController.gameController.CheckLastUnlocked () == 1)
+        if (GameController.gameController.CheckLastUnlocked() == 1)
         {
-            chapter2 = GameObject.Find("Chapter2But").GetComponent<Button> ();
+            chapter2 = GameObject.Find("Chapter2But").GetComponent<Button>();
             chapter2.interactable = false;
         }
     }
 
 
-    private void LoadLevel (int level)
+    private void LoadLevel(int level)
     {
-        GameController.gameController.UsedChapterSelection ();
+        GameController.gameController.UsedChapterSelection();
         SceneManager.LoadScene (level);
     }
 }
