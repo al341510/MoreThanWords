@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
@@ -11,11 +12,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenu, mainPauseMenu, optionsPauseMenu;
 
 
-    void Awake()
+    void Awake ()
     {
-        pauseMenu.SetActive(false);
-        mainPauseMenu.SetActive(false);
-        optionsPauseMenu.SetActive(false);
+        pauseMenu.SetActive (false);
+        mainPauseMenu.SetActive (false);
+        optionsPauseMenu.SetActive (false);
     }
 
 
@@ -59,7 +60,7 @@ public class PauseMenu : MonoBehaviour
     public void RestartLevel ()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+        SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
     }
 
 

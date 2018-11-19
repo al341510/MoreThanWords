@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System;
 using UnityEngine;
+using System.Linq;
 
 
 
@@ -26,21 +28,21 @@ public class OptionsMenu : MonoBehaviour
     private float volumeSave;
 
 
-    void Awake()
+    void Awake ()
     {
         settingsLocation = Application.persistentDataPath + "/Settings.dat";
 
-        PlayerSettings adjustments = new PlayerSettings();
+        PlayerSettings adjustments = new PlayerSettings ();
 
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
-        List<string> options = new List<string>();
+        resolutions = (Screen.resolutions.Select(resolution=> new Resolution { width = resolution.width, height = resolution.height }).Distinct()).ToArray ();
+        resolutionDropdown.ClearOptions ();
+        List<string> options = new List<string> ();
         resolutionSave = 0;
 
         for (int i = 0; i < resolutions.Length; i += 1)
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
-            options.Add(option);
+            options.Add (option);
 
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
             {
@@ -48,9 +50,9 @@ public class OptionsMenu : MonoBehaviour
             }
         }
 
-        resolutionDropdown.AddOptions(options);
+        resolutionDropdown.AddOptions (options);
         resolutionDropdown.value = resolutionSave;
-        resolutionDropdown.RefreshShownValue();
+        resolutionDropdown.RefreshShownValue ();
 
         /*if (GameController.gameController.noSettings == true)
         {
@@ -93,7 +95,7 @@ public class OptionsMenu : MonoBehaviour
 
     private PlayerSettings LoadSettings ()
     {
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        BinaryFormatter binaryFormatter = new BinaryFormatter ();
         FileStream file = File.Open (settingsLocation, FileMode.Open);
         PlayerSettings data = (PlayerSettings) binaryFormatter.Deserialize (file);
         file.Close ();
@@ -102,12 +104,12 @@ public class OptionsMenu : MonoBehaviour
         SetResolution (data.resolution);
         SetVolume (data.masterAudio);
         SetQuality (data.graphics);
-		/*
-        Debug.Log(data.fullscreen);
+
+        /*Debug.Log(data.fullscreen);
         Debug.Log(data.resolution);
         Debug.Log(data.masterAudio);
-        Debug.Log(data.graphics);
-		*/
+        Debug.Log(data.graphics);*/
+		
         return data;
     }
 
@@ -119,7 +121,7 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue ();
         volumeSlider.value = adjustments.masterAudio;
         graphicsDropdown.value = adjustments.graphics;
-        graphicsDropdown.RefreshShownValue();
+        graphicsDropdown.RefreshShownValue ();
     }
 
 

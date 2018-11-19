@@ -12,6 +12,8 @@ public class BounceOff : MonoBehaviour
     private BoxCollider2D platformCollider;
     private Rigidbody2D playerRB;
 
+    [SerializeField] private int verticalForce;
+
     
     // Use this for initialization
 	void Start ()
@@ -27,7 +29,7 @@ public class BounceOff : MonoBehaviour
     {
         if (collision.gameObject == player && (playerCollider.transform.position.y - playerCollider.bounds.size.y) > (platformCollider.transform.position.y + platformCollider.bounds.size.y / 2))
         {
-            playerRB.velocity = new Vector2 (0, 25);
+            playerRB.velocity = new Vector2 (0, verticalForce);
         }
     }
 }
