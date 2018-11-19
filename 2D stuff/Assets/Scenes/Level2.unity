@@ -1901,7 +1901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3a937be416244baeaa25c635bc177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FollowSpeed: 4
+  FollowSpeed: 2
+  limitH: 4
+  limitV: 3
   Target: {fileID: 1717983831}
 --- !u!4 &1831761341 stripped
 Transform:
