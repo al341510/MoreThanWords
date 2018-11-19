@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -103,10 +104,10 @@ public class OptionsMenu : MonoBehaviour
         SetVolume (data.masterAudio);
         SetQuality (data.graphics);
 
-        Debug.Log(data.fullscreen);
+        /*Debug.Log(data.fullscreen);
         Debug.Log(data.resolution);
         Debug.Log(data.masterAudio);
-        Debug.Log(data.graphics);
+        Debug.Log(data.graphics);*/
 
         return data;
     }

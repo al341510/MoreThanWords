@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -9,14 +10,14 @@ using UnityEngine.SceneManagement;
 
 public class Autosave : MonoBehaviour
 {
-    private int delay;
+    //private int delay;
 
 
 	void Awake ()
     {
         if (GameController.gameController.save == true)
         {
-            GameController.gameController.Save();
+            GameController.gameController.Save ();
         }
         
         /*currentScene = x;
@@ -28,20 +29,20 @@ public class Autosave : MonoBehaviour
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/SavedData/level.txt");
         binaryFormatter.Serialize(file, currentScene);
-        file.Close();*/
+        file.Close();
 
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             delay = 2;
 
             StartCoroutine(LoadLevelAfterDelay(delay));
-        }
+        }*/
     }
 
 
-    IEnumerator LoadLevelAfterDelay(int delay)
+    /*IEnumerator LoadLevelAfterDelay(int delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    }*/
 }
