@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4734359018956708}
   - component: {fileID: 114307683993655808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4899675537888736}
   - component: {fileID: 114380178240689122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armRight-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4980868213644664}
   - component: {fileID: 114613688625582860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4718095121623418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4676079949711484}
   - component: {fileID: 114983055807632572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow1.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4811135447956726}
   - component: {fileID: 114455519007076114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arrow2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 4336960643869554}
   - component: {fileID: 114644827882041556}
   - component: {fileID: 137858964082956018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4026754936726982}
   - component: {fileID: 114338510000219594}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow2.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4895873639902714}
   - component: {fileID: 114003654302388206}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armLeft-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4348897490225762}
   - component: {fileID: 114992489732216232}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4510990161095528}
   - component: {fileID: 114173615430772838}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow2.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 4597129351433746}
   - component: {fileID: 114148697550620852}
   - component: {fileID: 137902977438199554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 4561335027443088}
   - component: {fileID: 114003833141414710}
   - component: {fileID: 137896016142965146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4589391279670620}
   - component: {fileID: 114779535684081096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band1-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 4465557122359368}
   - component: {fileID: 114599137030521492}
   - component: {fileID: 137388666834754208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190489959851964}
   - component: {fileID: 114270985824177796}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4511983269562782}
   - component: {fileID: 114199012548411404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4523353105414914}
   - component: {fileID: 114542794094157910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band2.1-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4092639121694508}
   - component: {fileID: 114889478798252698}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: hip-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 4745958592822604}
   - component: {fileID: 114167062268770632}
   - component: {fileID: 137736612089941554}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465648081987922}
   - component: {fileID: 114317527573484708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971918483632828}
   - component: {fileID: 114231069101804726}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armRight2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4017250989799348}
   - component: {fileID: 95392664914752570}
-  m_Layer: 0
+  - component: {fileID: 50034568667989704}
+  - component: {fileID: 61219002006572934}
+  - component: {fileID: 114932060311446738}
+  - component: {fileID: 114043747413147220}
+  - component: {fileID: 114163597335860172}
+  m_Layer: 9
   m_Name: archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4989078326611628}
   - component: {fileID: 114937724004897264}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band1.1-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +414,7 @@ GameObject:
   - component: {fileID: 4059489553475646}
   - component: {fileID: 114193345703628406}
   - component: {fileID: 137057723256660352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757164462411060}
   - component: {fileID: 114901713530974422}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legLeft-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4157110873664664}
   - component: {fileID: 114263321800575142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow2.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -457,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4107506851052700}
   - component: {fileID: 114156544610232748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legLeft3-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +479,7 @@ GameObject:
   - component: {fileID: 4135930670271684}
   - component: {fileID: 114443367762411484}
   - component: {fileID: 137431690523776780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135092163864314}
   - component: {fileID: 114917226852601950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,13 +512,13 @@ GameObject:
   - component: {fileID: 4952939076506458}
   - component: {fileID: 114720457274737394}
   - component: {fileID: 137556939528086308}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1739839975119362
 GameObject:
   m_ObjectHideFlags: 1
@@ -523,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4983585084624490}
   - component: {fileID: 114052245116377288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arrow-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4148363655307674}
   - component: {fileID: 114453903696195434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legRight-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -555,7 +560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4572474424481464}
   - component: {fileID: 114379002414050040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +577,7 @@ GameObject:
   - component: {fileID: 4282611787536354}
   - component: {fileID: 114974193195351148}
   - component: {fileID: 137259211791771682}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: band2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4087360290298490}
   - component: {fileID: 114890776385573010}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armLeft2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4754712243186372}
   - component: {fileID: 114293359511067912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow1.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +626,7 @@ GameObject:
   - component: {fileID: 4880533955901380}
   - component: {fileID: 114060463763009636}
   - component: {fileID: 137548508538915294}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4921143775215498}
   - component: {fileID: 114500946015631668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legRight3-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4866239832351100}
   - component: {fileID: 114346954026624226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legRight2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4750833691305888}
   - component: {fileID: 114854519997095586}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow2.4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4042954337093920}
   - component: {fileID: 114524743810091152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: arrow3-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4104578756356154}
   - component: {fileID: 114883364070709962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: legLeft2-bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +723,7 @@ GameObject:
   - component: {fileID: 4285606316286044}
   - component: {fileID: 114187142666306738}
   - component: {fileID: 137310396796363240}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: armLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547744239238920}
   - component: {fileID: 114543468774569448}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bow1.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -748,7 +753,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537066185264870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54, y: -1.36, z: -0.0035011}
+  m_LocalPosition: {x: 15.77, y: -10.32, z: -0.0035011}
   m_LocalScale: {x: 0.23136728, y: 0.22851087, z: 0.23140341}
   m_Children:
   - {fileID: 4059489553475646}
@@ -1350,7 +1355,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739839975119362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.990793, y: 29.926823, z: 0}
+  m_LocalPosition: {x: -119.678604, y: -3.44857, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4811135447956726}
@@ -1370,6 +1375,51 @@ Transform:
   m_Father: {fileID: 4589391279670620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.203}
+--- !u!50 &50034568667989704
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &61219002006572934
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &95392664914752570
 Animator:
   serializedVersion: 3
@@ -1400,7 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7000003
+  m_Length: 0.6999991
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4087360290298490}
   m_AttachedIK: {fileID: 0}
@@ -1425,6 +1475,19 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4092639121694508}
   - {fileID: 4734359018956708}
+--- !u!114 &114043747413147220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c9d19f5ee77c4eb20aa5ef8c89081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementSmoothing: 0.05
+  m_FacingRight: 1
 --- !u!114 &114052245116377288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1437,7 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 7.6599994
+  m_Length: 7.6599884
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4811135447956726}
   m_AttachedIK: {fileID: 0}
@@ -1508,6 +1571,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114163597335860172
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9fd6bf0678adc4291af27bd945a2b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1450478883912138, guid: 7f8fe0ad64fc1bf4cb468a6caee2b743, type: 2}
 --- !u!114 &114167062268770632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1542,7 +1617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.38176128
+  m_Length: 0.381757
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4750833691305888}
   m_AttachedIK: {fileID: 0}
@@ -1631,7 +1706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.47082487
+  m_Length: 0.47082227
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4510990161095528}
   m_AttachedIK: {fileID: 0}
@@ -1647,7 +1722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2700014
+  m_Length: 0.27000037
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4348897490225762}
   m_AttachedIK: {fileID: 0}
@@ -1679,7 +1754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.5100477
+  m_Length: 1.5100479
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4511983269562782}
   m_AttachedIK: {fileID: 0}
@@ -1695,7 +1770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.39000005
+  m_Length: 0.39000273
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4523353105414914}
   m_AttachedIK: {fileID: 0}
@@ -1711,7 +1786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5500004
+  m_Length: 0.5500018
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4157110873664664}
   m_AttachedIK: {fileID: 0}
@@ -1727,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.44063187
+  m_Length: 0.44063377
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4921143775215498}
   m_AttachedIK: {fileID: 0}
@@ -1743,7 +1818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5600008
+  m_Length: 0.5599987
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4026754936726982}
   m_AttachedIK: {fileID: 0}
@@ -1759,7 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7400005
+  m_Length: 0.73999935
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4971918483632828}
   m_AttachedIK: {fileID: 0}
@@ -1796,7 +1871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.45267856
+  m_Length: 0.45268023
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4866239832351100}
   m_AttachedIK: {fileID: 0}
@@ -1812,7 +1887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 3.1100001
+  m_Length: 3.1099973
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4042954337093920}
   m_AttachedIK: {fileID: 0}
@@ -1876,7 +1951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.27000073
+  m_Length: 0.26999944
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4754712243186372}
   m_AttachedIK: {fileID: 0}
@@ -1976,7 +2051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.42000026
+  m_Length: 0.4200008
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4989078326611628}
   m_AttachedIK: {fileID: 0}
@@ -2008,7 +2083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.40553665
+  m_Length: 0.40553614
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4107506851052700}
   m_AttachedIK: {fileID: 0}
@@ -2024,7 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.19000037
+  m_Length: 0.19000109
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4734359018956708}
   m_AttachedIK: {fileID: 0}
@@ -2056,7 +2131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4400005
+  m_Length: 0.44000134
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4104578756356154}
   m_AttachedIK: {fileID: 0}
@@ -2072,10 +2147,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.41459617
+  m_Length: 0.4145952
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4676079949711484}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114932060311446738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08abecbbb70d6e4897d81f3b479b5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 114043747413147220}
+  animator: {fileID: 95392664914752570}
+  Rb: {fileID: 50034568667989704}
+  runSpeed: 10
+  safetyDistance: 1
+  passiveRange: 10
+  detectionRange: 8
+  attackRange: 4
+  status: 
+  horizontalMove: 0
+  platform: {fileID: 0}
+  minX: 0
+  maxX: 0
+  player: {fileID: 0}
+  attacking: 0
+  attack_cooldown: 1.35
 --- !u!114 &114937724004897264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2141,7 +2243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.59783316
+  m_Length: 0.5978332
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4135092163864314}
   m_AttachedIK: {fileID: 0}
