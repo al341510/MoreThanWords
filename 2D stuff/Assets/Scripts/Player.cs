@@ -17,24 +17,17 @@ public class Player : MonoBehaviour
 	bool jump = false;
 	[SerializeField] private bool playerIsCovering = false;
 
-	[SerializeField]private bool isAttacking;
-	[SerializeField]private int nowAnim;
-	[SerializeField]private int previousAnim = 0;
-
 	private float mainCharacterLife = 10f;
-	[SerializeField] private float attackPower = 1f;
-	[SerializeField] private int collectedKeys = 0;
+	private float attackPower = 1f;
+	private int collectedKeys = 0;
 
+	[SerializeField] private bool isAttacking;
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
 	private playerMagic storedMagic;
 
-	int noOfClicks;
-	bool canClick;
-
-	float comboCDStart = 0.55f;
-	float comboCD;
-
+	float comboCDStart = 0.3f;
+	private float comboCD;
 
 	void Start()
 	{
@@ -46,64 +39,51 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{	
-		if (Input.GetMouseButtonDown(0) && !isAttacking)
-		{
-			isAttacking = true;
-			comboCD = comboCDStart;
-		}
 		if (isAttacking)
 		{
 			if (comboCD > 0)
+				comboCD -= Time.deltaTime;
+			else //finished
 			{
-				comboCD = comboCD -= Time.deltaTime;
-			} 
-			else
-			{
-				isAttacking = false;
+				if (animator.GetBool("AttackCombo"))
+				{
+					comboCD = comboCDStart;
+					animator.SetBool("AttackCombo", false); 
+				}					
+				else
+				{
+					animator.SetBool("Attacking", false);
+					isAttacking = false;
+				}
 			}
 		}
 
-		/*
-		if (isAttacking)
-		{
-			nowAnim = IsAttackingAnim(); //we store our animation
-			//isAttacking = nowAnim != 0; //check if we are attacking
-			if (nowAnim != previousAnim) //if animation has change now we can reset combo
-			{
-				animator.SetBool("AttackCombo", false);
-			} 
-			if (nowAnim == 0)
-				isAttacking = false;
-		}
-		*/
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
+		else
+			horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
+		
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
 		animator.SetFloat("VelocityY",Rb.velocity.y); //detects the Y speed for jump animation
 		bool jumpButton = Input.GetButtonDown("Jump");
-		//animator.SetBool("Attacking", false);
-		bool magicButton = Input.GetButtonDown("UseMagic");
+		//bool magicButton = Input.GetButtonDown("UseMagic");
 
 		if (!playerIsCovering)
 		{	
-			/*
 			bool attackButton = Input.GetButtonDown("Attack");
-			if (attackButton) //if press attack 
+			if (attackButton && horizontalMove == 0 && Rb.velocity.y == 0) //if press attack 
 			{			
-				CalculateImpact();
+				//CalculateImpact();
 				if (!isAttacking) //and we were on idle
 				{
-					isAttacking = true;							
-					animator.SetBool("Attacking", true); //we are attacking (for the animator)
-					animator.SetBool("AttackCombo", false);
-					previousAnim = 1;
+					isAttacking = true;
+					animator.SetBool("Attacking", true);
+					comboCD = comboCDStart;
 				}
 				else //if we press in the middle of an attack
 				{
-					previousAnim = nowAnim; //store actual anim
-					animator.SetBool("AttackCombo", true); //he waits for next attack
+					animator.SetBool("AttackCombo", true);
 				}
-			}	*/		
-
+			}			
+				
 			if (jumpButton)
 			{
 				jump = true;
@@ -118,11 +98,11 @@ public class Player : MonoBehaviour
 			bool pickUpButton = Input.GetButtonDown("PickUpMagic");
 			if (pickUpButton)
 			{
+				print("pickupmagic");
 				//comprobar si se puede recoger una magia
 				//detectar el tipo
 				//si se puede:
 				//si hielo, storedMagic = playerMagic.ICE .. etc
-
 			}*/
 		}
 
@@ -146,18 +126,6 @@ public class Player : MonoBehaviour
 		jump = false;
 	}
 
-	int IsAttackingAnim()
-	{
-		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Kallum_attack_1"))
-			return 1;
-		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Kallum_attack_2"))
-			return 2;
-		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Kallum_attack_3"))
-			return 3;
-		else
-			return 0;		
-	}
-
 	IEnumerator UseMagic(playerMagic selectedMagic)
 	{
 		//cambiar el estado del personaje
@@ -168,7 +136,7 @@ public class Player : MonoBehaviour
 		activeMagic = playerMagic.NEUTRAL;
 	}
 
-
+	/*
 	void CalculateImpact ()
 	{
 		RaycastHit hit;
@@ -177,7 +145,7 @@ public class Player : MonoBehaviour
 		//si lo hay
 		//GiveDamage(enemigo);
 	}
-
+	*/
 	void RecieveDamage (Enemy enemy)
 	{
 		float damage;
@@ -252,56 +220,4 @@ public class Player : MonoBehaviour
 
 		enemy.TakeDamage(damageGiven);
 	}
-	/*
-	void ComboStarter()
-	{
-		if (canClick)
-		{
-			noOfClicks++;
-		}
-		if (noOfClicks == 1)
-		{
-			animator.SetInteger("AnimationN", 1);
-			isAttacking = true;
-		}
-	}
-
-	void ComboCheck() 
-	{
-		canClick = false;
-
-		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Kallum_attack_1") && noOfClicks == 1) // we are on the first and 1 click
-		{
-			animator.SetInteger("AnimationN", 0);//idle
-			canClick = true;
-			noOfClicks = 0;
-		}
-	}
-	*/
-
-	/*
-	IEnumerator ComboCheck()
-	{
-		bool nextAttack = false;
-		while (isAttacking)
-		{
-			if (Input.GetMouseButtonDown(0))
-			{
-				nextAttack = true;
-				isAttacking = false;
-			}
-		}
-
-		yield return new WaitForSeconds(2f);
-		if (nextAttack)
-		{
-			animator.SetBool("AttackCombo", true);	
-		}
-		else
-		{
-			animator.SetBool("AttackCombo", false);
-		}
-			
-	}*/
-
 }

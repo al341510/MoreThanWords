@@ -915,6 +915,16 @@ Prefab:
       propertyPath: m_Length
       value: 0.25054404
       objectReference: {fileID: 0}
+    - target: {fileID: 137412118806392098, guid: 05f64252079857a439c775ebf408d0ee,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114155094727495602, guid: 05f64252079857a439c775ebf408d0ee,
+        type: 2}
+      propertyPath: activeMagic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05f64252079857a439c775ebf408d0ee, type: 2}
   m_IsPrefabAsset: 0
