@@ -8,10 +8,10 @@ public class NPCArcherAttack : MonoBehaviour {
 
     public void CreateArrow(float x, float y, float direction)
     {
-        this.x = x;
-        this.y = y;
-        this.direction = direction;
-        Invoke("SpawnArrow", 0.85f);
+        this.x = x; // X del arquero
+        this.y = y; // Y del arquero
+        this.direction = direction; // es 1 si mira a la izquierda // es casi 0 (numero muy pequeño) si mira a la derecha
+        Invoke("SpawnArrow", 0.85f); // Añade delay al metodo
     }
 
     private void SpawnArrow()

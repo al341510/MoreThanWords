@@ -66,6 +66,10 @@ public class NPCPatrolMovement : MonoBehaviour {
     {
         attacker = this.GetComponent<NPCArcherAttack>();
 
+        linecast = Physics2D.Linecast(this.transform.position, this.transform.position - new Vector3(0, 20, 0),  ~(1<<9));
+
+        platform = linecast.collider.gameObject;
+
         timer = attack_cooldown;
         attacking = false;
 
@@ -83,9 +87,7 @@ public class NPCPatrolMovement : MonoBehaviour {
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        linecast = Physics2D.Linecast(this.transform.position, this.transform.position - new Vector3(0, 20, 0));
 
-        platform = linecast.collider.gameObject;
     }
 
     // Update is called once per frame

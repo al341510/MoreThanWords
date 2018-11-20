@@ -376,11 +376,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4017250989799348}
   - component: {fileID: 95392664914752570}
-  - component: {fileID: 50034568667989704}
   - component: {fileID: 61219002006572934}
-  - component: {fileID: 114932060311446738}
-  - component: {fileID: 114043747413147220}
   - component: {fileID: 114163597335860172}
+  - component: {fileID: 50466836202265368}
+  - component: {fileID: 61395465194463612}
+  - component: {fileID: 114454934896782808}
+  - component: {fileID: 114315383517489096}
   m_Layer: 9
   m_Name: archer
   m_TagString: Untagged
@@ -1375,7 +1376,7 @@ Transform:
   m_Father: {fileID: 4589391279670620}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.203}
---- !u!50 &50034568667989704
+--- !u!50 &50466836202265368
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -1396,6 +1397,31 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &61219002006572934
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!61 &61395465194463612
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1475,19 +1501,6 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4092639121694508}
   - {fileID: 4734359018956708}
---- !u!114 &114043747413147220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537066185264870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430c9d19f5ee77c4eb20aa5ef8c89081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovementSmoothing: 0.05
-  m_FacingRight: 1
 --- !u!114 &114052245116377288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1758,6 +1771,19 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4511983269562782}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114315383517489096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c9d19f5ee77c4eb20aa5ef8c89081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementSmoothing: 0.05
+  m_FacingRight: 1
 --- !u!114 &114317527573484708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1875,6 +1901,33 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4866239832351100}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114454934896782808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537066185264870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08abecbbb70d6e4897d81f3b479b5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 114315383517489096}
+  animator: {fileID: 95392664914752570}
+  Rb: {fileID: 50466836202265368}
+  runSpeed: 10
+  safetyDistance: 1
+  passiveRange: 10
+  detectionRange: 8
+  attackRange: 4
+  status: 
+  horizontalMove: 0
+  platform: {fileID: 0}
+  minX: 0
+  maxX: 0
+  player: {fileID: 0}
+  attacking: 0
+  attack_cooldown: 1.1
 --- !u!114 &114455519007076114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2151,33 +2204,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4676079949711484}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114932060311446738
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537066185264870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08abecbbb70d6e4897d81f3b479b5f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 114043747413147220}
-  animator: {fileID: 95392664914752570}
-  Rb: {fileID: 50034568667989704}
-  runSpeed: 10
-  safetyDistance: 1
-  passiveRange: 10
-  detectionRange: 8
-  attackRange: 4
-  status: 
-  horizontalMove: 0
-  platform: {fileID: 0}
-  minX: 0
-  maxX: 0
-  player: {fileID: 0}
-  attacking: 0
-  attack_cooldown: 1.35
 --- !u!114 &114937724004897264
 MonoBehaviour:
   m_ObjectHideFlags: 1
