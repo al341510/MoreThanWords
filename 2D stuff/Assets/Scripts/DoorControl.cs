@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorControl : MonoBehaviour {
 	private Animator animator;
@@ -16,11 +17,19 @@ public class DoorControl : MonoBehaviour {
 
 		if (other.gameObject.CompareTag ("Player")) {
 			if (doorOpen) {
-				//solo cierra la puerta al tocar el jugador, pero podria cambiar de nivel
-				//se puede hacer que se abra solo si el jugador esta cerca (la puerta esta en pantalla)
-				animator.SetBool("openDoor", false); 
+				//solo cierra la puerta al tocar el jugador
+				animator.SetBool("openDoor", false);
+				StartCoroutine(NextLevel ()); //para cambiar de nivel
 			}
 		}
 
+	}
+
+	IEnumerator NextLevel(){
+		//Tiene una espera para hacer una transicion
+
+		yield return new WaitForSeconds (2);
+
+		SceneManager.LoadScene ("Menu"); //Cambiar por el siguiente nivel cuando este
 	}
 }
