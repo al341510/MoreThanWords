@@ -51,15 +51,18 @@ public class NPCPatrolController2D : MonoBehaviour {
         transform.Rotate(0, -180, 0);
     }
 
-    internal void LookPlayer(float xArquero, float xPlayer)
+    internal void LookPlayer(float xArquero, float xPlayer, bool atacando)
     {
-        if (xArquero > xPlayer && m_FacingRight)
+        if (!atacando)
         {
-            Flip();
-        }
-        else if (xArquero < xPlayer && !m_FacingRight)
-        {
-            Flip();
+            if (xArquero > xPlayer && m_FacingRight)
+            {
+                Flip();
+            }
+            else if (xArquero < xPlayer && !m_FacingRight)
+            {
+                Flip();
+            }
         }
     }
 }

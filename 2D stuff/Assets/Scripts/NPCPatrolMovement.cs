@@ -23,7 +23,7 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     public float attackRange = 4f; // DISTANCIA A LA QUE EL ENEMIGO REALIZA EL ATAQUE
 
-    string status; // STATUS DEL ENEMIGO - combat // noCombat - ABIERTO A MAS OPCIONES
+    [SerializeField] string status; // STATUS DEL ENEMIGO - combat // noCombat - ABIERTO A MAS OPCIONES
 
     //HORIZONTAL MOVE NO FUNCIONA EXACTAMENTE IGUAL AL DE PLAYER MOVEMENT
     //SOLO ES 1 o -1 PARA LA DIRECCION - EL CALCULO SE HACE AL LLAMAR A MOVE YA QUE SIEMPRE SE MUEVE A VELOCIDAD MAXIMA
@@ -38,6 +38,8 @@ public class NPCPatrolMovement : MonoBehaviour {
     RaycastHit2D linecast;
 
     [SerializeField] private bool attacking;
+
+    NPCArcherAttack attacker;
 
     public float attack_cooldown = 1.1f;
 
@@ -62,6 +64,8 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     private void Awake()
     {
+        attacker = this.GetComponent<NPCArcherAttack>();
+
         timer = attack_cooldown;
         attacking = false;
 
@@ -116,27 +120,42 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > attackRange && this.transform.position.x - safetyDistance > minX && this.transform.position.x + safetyDistance < maxX)
             {
-                if (this.transform.position.x - player.transform.position.x <  0)
+                Debug.Log("entra");
+                if (this.transform.position.x + 0.2 - player.transform.position.x <  0)
                 {
                     horizontalMove = +1;
                 }
-                else
+                else if (this.transform.position.x - 0.2 - player.transform.position.x > 0)
                 {
                     horizontalMove = -1;
                 }
+                else
+                {
+                    horizontalMove = 0;
+                }
+            }
+            else if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > attackRange && this.transform.position.x + safetyDistance > maxX && transform.position.x > player.transform.position.x)
+            {
+                horizontalMove = -1;
+            }
+            else if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > attackRange && this.transform.position.x - safetyDistance < minX && transform.position.x < player.transform.position.x)
+            {
+                horizontalMove = +1;
             }
             else
             {
                 //RANGO DE ESPERA O ATAQUE -> SE QUEDA QUIETO
                 horizontalMove = 0;
                 //MIRA HACIA EL PLAYER
-                controller.LookPlayer(this.transform.position.x, player.transform.position.x);
+                controller.LookPlayer(this.transform.position.x, player.transform.position.x, attacking);
                 //HAY CONTACTO VISUAL ENTRE EL ARQUERO Y EL JUGADOR
                 linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1<<9));
                 if(linecast.collider.gameObject.name == "Kallum")
                 {
                     if (!attacking && Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < attackRange)
                     {
+                        attacker.CreateArrow(transform.position.x, transform.position.y, transform.rotation.y);
+                        //Debug.Log(transform.rotation);
                         attacking = true;
                         animator.SetBool("Attack", attacking);
                     }

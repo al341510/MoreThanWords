@@ -1929,7 +1929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.32000062
+  m_Length: 0.32000095
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4612198553812084}
   m_AttachedIK: {fileID: 0}
@@ -1964,7 +1964,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.000001
+  m_Length: 1.0000007
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4167106030460340}
   m_AttachedIK: {fileID: 0}
@@ -2022,10 +2022,6 @@ MonoBehaviour:
   runSpeed: 24
   playerIsCovering: 0
   isAttacking: 0
-  nowAnim: 0
-  previousAnim: 0
-  attackPower: 1
-  collectedKeys: 0
   activeMagic: 0
 --- !u!114 &114167791698402954
 MonoBehaviour:
@@ -2059,7 +2055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.66715276
+  m_Length: 0.6671526
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4722051582530544}
   m_AttachedIK: {fileID: 0}
@@ -2178,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.28171057
+  m_Length: 0.28171045
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4619474890832362}
   m_AttachedIK: {fileID: 0}
@@ -2476,7 +2472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.8700013
+  m_Length: 0.87000144
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4448321585854024}
   m_AttachedIK: {fileID: 0}
@@ -2530,7 +2526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.25054374
+  m_Length: 0.25054404
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4156419045721714}
   m_AttachedIK: {fileID: 0}
@@ -2546,7 +2542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.33654028
+  m_Length: 0.33654043
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4200358975102048}
   m_AttachedIK: {fileID: 0}
@@ -2987,7 +2983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.9700125
+  m_Length: 1.9100006
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4088333664151398}
   m_AttachedIK: {fileID: 0}
