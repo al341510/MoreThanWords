@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - OpenDoor
+  - Italics
   layers:
   - Default
   - TransparentFX
