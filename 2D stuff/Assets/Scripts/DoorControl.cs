@@ -30,6 +30,6 @@ public class DoorControl : MonoBehaviour {
 
 		yield return new WaitForSeconds (2);
 
-		SceneManager.LoadScene ("TrueLevel2"); //Cambiar por el siguiente nivel cuando este
+		SceneManager.LoadScene ("Menu"); //Cambiar por el siguiente nivel cuando este
 	}
 }

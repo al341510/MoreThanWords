@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0543fe805424df99fe08ce744cbe49, type: 3}
+  m_Name: wizStep
+  m_EditorClassIdentifier: 
+  m_PoseEntries:
+  - path: Huesos/Cadera
+    localPosition: {x: -1.3851954, y: -1.355555, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.62701416, w: 0.7790079}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda
+    localPosition: {x: 0.5524841, y: -0.000000029802322, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.020525564, w: 0.99978936}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza
+    localPosition: {x: 1.5100006, y: -0.000000001884473, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.03536282, w: 0.99937457}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza/Capucha
+    localPosition: {x: -0.43361896, y: 1.0535136, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.048936717, w: 0.9988019}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza/Capucha/Capucha2
+    localPosition: {x: 1.1392691, y: -0.000000019033905, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.026379155, w: 0.999652}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza/Capucha/Capucha2/Capucha3
+    localPosition: {x: 1.2551233, y: -0.00000014001853, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.36978447, w: 0.92911756}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza/Capucha/Capucha2/Capucha3/Capucha4
+    localPosition: {x: 1.3767748, y: -0.00000032782555, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.33583102, w: 0.94192225}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/Cabeza/Capucha/Capucha2/Capucha3/Capucha4/Capucha5
+    localPosition: {x: 1.0000004, y: 0.0000003427267, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.48534122, w: 0.87432486}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer
+    localPosition: {x: 0.78312796, y: 0.63694984, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.82167375, w: 0.56995815}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer
+    localPosition: {x: 1.160505, y: 0.00000011920929, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.46508166, w: 0.8852678}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer/ManoDer
+    localPosition: {x: 1.0000209, y: -0.00000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.4583823, w: 0.8887551}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer/ManoDer/DedosDer
+    localPosition: {x: 0.2100071, y: -0.000000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.2414091, w: 0.97042346}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer/ManoDer/PulgarDer
+    localPosition: {x: 0.04902923, y: -0.12698865, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.49473703, w: 0.86904275}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer/TelaBrazoDer3
+    localPosition: {x: -0.26086694, y: -0.21092017, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.24779679, w: 0.96881205}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/AntebrazoDer/TelaBrazoDer3/TelaBrazoDer4
+    localPosition: {x: 0.5846732, y: 0.000000037252903, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.37418723, w: 0.9273532}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/TelaBrazoDer
+    localPosition: {x: 0.28664356, y: -0.3402244, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.1438227, w: 0.9896035}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoDer/TelaBrazoDer/TelaBrazoDer2
+    localPosition: {x: 0.39999998, y: -0.000000040978193, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.24012356, w: 0.9707424}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq
+    localPosition: {x: 0.9962918, y: -0.15544096, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.78832525, w: 0.61525875}
+    localScale: {x: 1.0000004, y: 1.0000004, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq
+    localPosition: {x: 1.1605049, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.533463, w: 0.8458234}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq/ManoIzq
+    localPosition: {x: 1.00002, y: -0.00000005960464, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.45838237, w: 0.88875514}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq/ManoIzq/DedosIzq
+    localPosition: {x: 0.2100071, y: -0.000000014901161, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.31976718, w: 0.9474962}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq/ManoIzq/PulgarIzq
+    localPosition: {x: 0.04902923, y: -0.12698865, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.5999271, w: 0.80005467}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq/TelaBrazoIzq3
+    localPosition: {x: -0.27321404, y: -0.21190637, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.28356594, w: 0.9589527}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/AntebrazoIzq/TelaBrazoIzq3/TelaBrazoIzq4
+    localPosition: {x: 0.43727908, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.36499867, w: 0.93100804}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/TelaBrazoIzq
+    localPosition: {x: 0.27452013, y: -0.259315, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.16112576, w: 0.9869339}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Espalda/BrazoIzq/TelaBrazoIzq/TelaBrazoIzq2
+    localPosition: {x: 0.46815825, y: -0.0000000041909516, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.14593723, w: 0.9892939}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/MusloDer
+    localPosition: {x: -0.1137422, y: 0.50801146, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.98548347, w: -0.16977142}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/MusloDer/PiernaDer
+    localPosition: {x: 0.8753528, y: 0.000000029802322, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.4997908, w: 0.86614615}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/MusloDer/PiernaDer/PieDer
+    localPosition: {x: 0.9245556, y: -0.00000021932647, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.68735063, w: 0.7263258}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/MusloIzq
+    localPosition: {x: 0.05792314, y: -0.30368125, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.98219883, w: 0.18784434}
+    localScale: {x: 1.0000006, y: 1.0000006, z: 1}
+  - path: Huesos/Cadera/MusloIzq/PiernaIzq
+    localPosition: {x: 0.8753528, y: 0.000000029802322, z: 0}
+    localRotation: {x: 0, y: 0, z: 0, w: 1}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/MusloIzq/PiernaIzq/PieIzq
+    localPosition: {x: 0.9245556, y: -0.00000021932647, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.6373202, w: 0.7705991}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Falda1
+    localPosition: {x: 0.06977156, y: 0.91757184, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.9904248, w: 0.13805348}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Falda1/Falda2
+    localPosition: {x: 0.5988278, y: -0.000000059604645, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.015907697, w: 0.99987346}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Falda3
+    localPosition: {x: 0.08518198, y: 0.3637244, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9975112, w: 0.07050809}
+    localScale: {x: 1.0000012, y: 1.0000012, z: 1}
+  - path: Huesos/Cadera/Falda3/Falda4
+    localPosition: {x: 0.73346496, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.007542205, w: 0.9999716}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Falda5
+    localPosition: {x: 0.23038384, y: -0.43017104, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9909266, w: 0.13440405}
+    localScale: {x: 1.0000005, y: 1.0000005, z: 1}
+  - path: Huesos/Cadera/Falda5/Falda6
+    localPosition: {x: 0.73346496, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.015087787, w: 0.9998862}
+    localScale: {x: 1, y: 1, z: 1}
+  - path: Huesos/Cadera/Falda7
+    localPosition: {x: 0.36301774, y: -0.7672051, z: 0}
+    localRotation: {x: 0, y: 0, z: -0.9715008, w: 0.23703642}
+    localScale: {x: 1.0000001, y: 1.0000001, z: 1}
+  - path: Huesos/Cadera/Falda7/Falda8
+    localPosition: {x: 0.73346496, y: 0, z: 0}
+    localRotation: {x: 0, y: 0, z: 0.07895707, w: 0.996878}
+    localScale: {x: 1, y: 1, z: 1}
