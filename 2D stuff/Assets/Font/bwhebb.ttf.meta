@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 12241842b950d2a42addcd5bc12d90e9
+timeCreated: 1541430979
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bwhebb
+  fontNames:
+  - Bwhebb
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

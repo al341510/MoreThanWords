@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
-{	
-	public CharacterController2D controller;
+{
+    [SerializeField]
+    private Health health;
+
+    private int startHealth = 100;
+
+    public CharacterController2D controller;
 
 	public Animator animator;
 
@@ -24,9 +30,16 @@ public class Player : MonoBehaviour
 	[SerializeField] private bool isAttacking;
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
-	private playerMagic storedMagic;
 
-	float comboCDStart = 0.3f;
+    [SerializeField]
+    private Text keyNumber;
+
+    [SerializeField]
+    private int keyOnMap;
+
+    private int collectedKey = 0;
+
+    float comboCDStart = 0.3f;
 	private float comboCD;
 
 	void Start()
@@ -34,12 +47,24 @@ public class Player : MonoBehaviour
 		isAttacking = false;
 		activeMagic = playerMagic.NEUTRAL;
 		comboCD = comboCDStart;
-	}
+        health.setHealth(startHealth, startHealth);
+    }
 
 	// Update is called once per frame
 	void Update()
-	{	
-		if (isAttacking)
+	{
+        keyNumber.text = collectedKey.ToString() + "/" + keyOnMap.ToString();
+        //Test health
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            health.CurrentValue -= 20;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            health.CurrentValue += 20;
+        }
+
+        if (isAttacking)
 		{
 			if (comboCD > 0)
 				comboCD -= Time.deltaTime;

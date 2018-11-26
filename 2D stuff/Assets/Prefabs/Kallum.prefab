@@ -2047,6 +2047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12582b05fdc89b54c9d58c27408f0038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 0}
   controller: {fileID: 114664796609565168}
   animator: {fileID: 95494666484219900}
   Rb: {fileID: 50482614597866550}
@@ -2054,6 +2055,8 @@ MonoBehaviour:
   playerIsCovering: 0
   isAttacking: 0
   activeMagic: 0
+  keyNumber: {fileID: 0}
+  keyOnMap: 0
 --- !u!114 &114167791698402954
 MonoBehaviour:
   m_ObjectHideFlags: 1
