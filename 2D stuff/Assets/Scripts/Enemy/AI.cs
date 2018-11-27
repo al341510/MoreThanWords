@@ -115,7 +115,7 @@ public class AI : MonoBehaviour {
             {
                 //only for archer important. I dont like it, but it was late, when i create this
                 if (IsArcher != 0) {
-                    attacker.CreateArrow(transform.position.x, transform.position.y, -transform.rotation.y);
+                    attacker.Attack(transform.position.x, transform.position.y, -transform.rotation.y);
                 }
 
                 animator.SetBool("Attack", attackingF);

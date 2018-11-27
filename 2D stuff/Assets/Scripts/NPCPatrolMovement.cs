@@ -39,7 +39,7 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     [SerializeField] private bool attacking;
 
-    NPCArcherAttack attacker;
+    Attacker attacker;
 
     public float attack_cooldown = 1.1f;
 
@@ -64,7 +64,7 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     private void Awake()
     {
-        attacker = this.GetComponent<NPCArcherAttack>();
+        attacker = this.GetComponent<Attacker>();
 
         linecast = Physics2D.Linecast(this.transform.position, this.transform.position - new Vector3(0, 20, 0),  ~(1<<9));
 
@@ -156,7 +156,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                 {
                     if (!attacking && Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < attackRange)
                     {
-                        attacker.CreateArrow(transform.position.x, transform.position.y, transform.rotation.y);
+                        attacker.Attack(transform.position.x, transform.position.y, transform.rotation.y);
                         //Debug.Log(transform.rotation);
                         attacking = true;
                         animator.SetBool("Attack", attacking);

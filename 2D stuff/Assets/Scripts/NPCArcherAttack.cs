@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCArcherAttack : MonoBehaviour {
+public class NPCArcherAttack : Attacker {
     public GameObject arrow;
     float x, y, direction;
 
-    public void CreateArrow(float x, float y, float direction)
+    public override void Attack(float x, float y, float direction)
     {
         this.x = x; // X del arquero
         this.y = y; // Y del arquero
