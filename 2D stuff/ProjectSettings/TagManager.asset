@@ -7,6 +7,8 @@ TagManager:
   - Key
   - OpenDoor
   - Italics
+  - PowerUpFire
+  - PowerUpIce
   layers:
   - Default
   - TransparentFX
