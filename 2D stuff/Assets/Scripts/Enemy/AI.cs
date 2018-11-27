@@ -261,10 +261,10 @@ public class AI : MonoBehaviour {
             elementNumber = value;
             switch (elementNumber)
             {
-                case 0:
+                case 1:
                     enemyMagic = enemyType.FIRE;
                     break;
-                case 1:
+                case 2:
                     enemyMagic = enemyType.ICE;
                     break;
                 default:

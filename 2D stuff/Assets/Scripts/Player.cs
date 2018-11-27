@@ -23,9 +23,7 @@ public class Player : MonoBehaviour
 	bool jump = false;
 	[SerializeField] private bool playerIsCovering = false;
 
-	private float mainCharacterLife = 10f;
 	private float attackPower = 1f;
-	private int collectedKeys = 0;
 
 	[SerializeField] private bool isAttacking;
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
@@ -33,6 +31,9 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Text keyNumber;
+
+    [SerializeField]
+    private Image elementIcon;
 
     [SerializeField]
     private int keyOnMap;
@@ -199,7 +200,7 @@ public class Player : MonoBehaviour
 			break;
 		}
 
-		mainCharacterLife -= damage;
+        health.CurrentValue -= (int)damage;
 	}
 
 	void GiveDamage (Enemy enemy)
@@ -245,4 +246,16 @@ public class Player : MonoBehaviour
 
 		enemy.TakeDamage(damageGiven);
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "PowerUpFire")
+        {
+            activeMagic = playerMagic.FIRE;
+        }
+        if (other.tag == "PowerUpIce")
+        {
+            activeMagic = playerMagic.ICE;
+        }
+    }
 }
