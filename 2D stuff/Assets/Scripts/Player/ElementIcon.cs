@@ -23,13 +23,13 @@ public class ElementIcon : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (player.activeMagic.ToString() == "FIRE")
+        if (player.storedMagic.ToString() == "FIRE")
         {
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = myFirstImage;
             change = true;
         }
-        else if (player.activeMagic.ToString() == "ICE")
+        else if (player.storedMagic.ToString() == "ICE")
         {
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = mySecondImage;
