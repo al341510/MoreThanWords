@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
 	[SerializeField] private bool isAttacking;
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
+    public playerMagic storedMagic;
 
     [SerializeField]
     private Text keyNumber;
@@ -251,11 +252,11 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "PowerUpFire")
         {
-            activeMagic = playerMagic.FIRE;
+            storedMagic = playerMagic.FIRE;
         }
         if (other.tag == "PowerUpIce")
         {
-            activeMagic = playerMagic.ICE;
+            storedMagic = playerMagic.ICE;
         }
     }
 }

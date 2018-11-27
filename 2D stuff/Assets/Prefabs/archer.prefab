@@ -380,8 +380,6 @@ GameObject:
   - component: {fileID: 114163597335860172}
   - component: {fileID: 50466836202265368}
   - component: {fileID: 61395465194463612}
-  - component: {fileID: 114454934896782808}
-  - component: {fileID: 114315383517489096}
   - component: {fileID: 61769855418705924}
   - component: {fileID: 114299602751715812}
   m_Layer: 9
@@ -1821,19 +1819,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4511983269562782}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114315383517489096
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537066185264870}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430c9d19f5ee77c4eb20aa5ef8c89081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovementSmoothing: 0.05
-  m_FacingRight: 1
 --- !u!114 &114317527573484708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1951,33 +1936,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4866239832351100}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114454934896782808
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537066185264870}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08abecbbb70d6e4897d81f3b479b5f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 114315383517489096}
-  animator: {fileID: 95392664914752570}
-  Rb: {fileID: 50466836202265368}
-  runSpeed: 10
-  safetyDistance: 1
-  passiveRange: 10
-  detectionRange: 8
-  attackRange: 4
-  status: 
-  horizontalMove: 0
-  platform: {fileID: 0}
-  minX: 0
-  maxX: 0
-  player: {fileID: 0}
-  attacking: 0
-  attack_cooldown: 1.1
 --- !u!114 &114455519007076114
 MonoBehaviour:
   m_ObjectHideFlags: 1

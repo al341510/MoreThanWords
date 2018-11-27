@@ -2921,6 +2921,7 @@ MonoBehaviour:
   playerIsCovering: 0
   isAttacking: 0
   activeMagic: 0
+  storedMagic: 0
   keyNumber: {fileID: 114392786311525328}
   elementIcon: {fileID: 0}
   keyOnMap: 3
