@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-        keyNumber.text = collectedKey.ToString() + "/" + keyOnMap.ToString();
+        //keyNumber.text = collectedKey.ToString() + "/" + keyOnMap.ToString();
         //Test health
         if (Input.GetKeyDown(KeyCode.Q))
         {
