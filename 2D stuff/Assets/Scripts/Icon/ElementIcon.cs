@@ -35,8 +35,9 @@ public class ElementIcon : MonoBehaviour {
             this.GetComponent<Image>().sprite = mySecondImage;
             change = true;
         }
-        /*
-         TO-DO add requiment for neutral
-         */
+        else if (change != false && player.storedMagic.ToString() == "NEUTRAL") {
+            this.GetComponent<Image>().enabled = false;
+            change = false;
+        }
     }
 }

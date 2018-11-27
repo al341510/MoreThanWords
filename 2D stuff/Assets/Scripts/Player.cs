@@ -61,9 +61,18 @@ public class Player : MonoBehaviour
         {
             health.CurrentValue -= 20;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             health.CurrentValue += 20;
+        }
+
+        //use magic
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (storedMagic.ToString() != "NEUTRAL") { 
+                activeMagic = storedMagic;
+                storedMagic = playerMagic.NEUTRAL;
+            }
         }
 
         if (isAttacking)
