@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Health health;
 
-    private int startHealth = 100;
+    private float startHealth = 100f;
 
     public CharacterController2D controller;
 
@@ -59,11 +59,11 @@ public class Player : MonoBehaviour
         //Test health
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            health.CurrentValue -= 20;
+            health.CurrentValue -= 20f;
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-            health.CurrentValue += 20;
+            health.CurrentValue += 20f;
         }
 
         //use magic
@@ -182,6 +182,7 @@ public class Player : MonoBehaviour
 		//GiveDamage(enemigo);
 	}
 	*/
+	/*
 	void RecieveDamage (Enemy enemy)
 	{
 		float damage;
@@ -256,7 +257,7 @@ public class Player : MonoBehaviour
 
 		enemy.TakeDamage(damageGiven);
 	}
-
+	*/
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "PowerUpFire")

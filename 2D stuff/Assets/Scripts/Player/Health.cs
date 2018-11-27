@@ -15,12 +15,12 @@ public class Health : MonoBehaviour {
 
     /*Maxpossible Health and getter/setter*/
     [SerializeField]
-    private int MaxValue { get; set; }
+    private float MaxValue { get; set; }
 
     /*Current Healt and getter/setter*/
-    private int currentValue;
+    private float currentValue;
 
-    public int CurrentValue
+    public float CurrentValue
     {
         get
         {
@@ -60,7 +60,7 @@ public class Health : MonoBehaviour {
         }
 	}
 
-    public void setHealth(int currentValue, int maxValue) {
+    public void setHealth(float currentValue, float maxValue) {
         MaxValue = maxValue;
         CurrentValue = currentValue;
     }
