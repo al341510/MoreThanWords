@@ -10,18 +10,19 @@ public class BounceOff : MonoBehaviour
     private GameObject player;
     private CircleCollider2D playerCollider;
     private BoxCollider2D platformCollider;
-    private Rigidbody2D playerRB;
+    private CharacterController2D playerController;
 
-    [SerializeField] private int verticalForce;
+    //[SerializeField] private float horizontalForce
+    [SerializeField] private float verticalForce;
 
-    
+
     // Use this for initialization
-	void Start ()
+    void Start ()
     {
         player = GameObject.FindGameObjectWithTag ("Player");
         playerCollider = player.GetComponent<CircleCollider2D> ();
         platformCollider = this.GetComponent<BoxCollider2D> ();
-        playerRB = player.GetComponent<Rigidbody2D> ();
+        playerController = player.GetComponent<CharacterController2D> ();
 	}
 
 
@@ -29,7 +30,7 @@ public class BounceOff : MonoBehaviour
     {
         if (collision.gameObject == player && (playerCollider.transform.position.y - playerCollider.bounds.size.y) > (platformCollider.transform.position.y + platformCollider.bounds.size.y / 2))
         {
-            playerRB.velocity = new Vector2 (0, verticalForce);
+            playerController.Bounce(verticalForce);
         }
     }
 }
