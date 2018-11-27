@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106506971746308}
   - component: {fileID: 114970289445320724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoIzq4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4847286867655694}
   - component: {fileID: 114917185512386284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4442053578768266}
   - component: {fileID: 114651146297612348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068616424891140}
   - component: {fileID: 114517345691805226}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AntebrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4737284620684474}
   - component: {fileID: 114267689918155098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capucha5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944648237911328}
   - component: {fileID: 114652284539022446}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105129256828610}
   - component: {fileID: 114193193030168144}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ManoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4417437868001292}
   - component: {fileID: 114573895361874510}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Espalda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4567372472179408}
   - component: {fileID: 114775666231177122}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BrazoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4181000180981428}
   - component: {fileID: 114481068416745288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKbrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 4594609613319420}
   - component: {fileID: 114306076704885254}
   - component: {fileID: 137037672712504630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: manoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 4735314131247866}
   - component: {fileID: 114584529051626838}
   - component: {fileID: 137722672296707032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4360943918059842}
   - component: {fileID: 114204853314554374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoDer4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4801543069496292}
   - component: {fileID: 114897896627110194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894300630738518}
   - component: {fileID: 114792934078002230}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKpiernaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4547641592896324}
   - component: {fileID: 114843655456971146}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PulgarDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4226911982414978}
   - component: {fileID: 114337675941747556}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cabeza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4896323145976248}
   - component: {fileID: 114303842847415296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AntebrazoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4603993568067938}
   - component: {fileID: 114799436729594374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MusloIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,12 @@ GameObject:
   - component: {fileID: 4813179767055730}
   - component: {fileID: 114175391725656384}
   - component: {fileID: 95440201654148858}
-  m_Layer: 0
+  - component: {fileID: 50314287586787356}
+  - component: {fileID: 61386860916067458}
+  - component: {fileID: 114945195090669368}
+  - component: {fileID: 114189466583131466}
+  - component: {fileID: 114532998637565668}
+  m_Layer: 9
   m_Name: Brujo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4073752373173106}
   - component: {fileID: 114200406066055492}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ManoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4069043076761060}
   - component: {fileID: 114734894322132376}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PiernaDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +381,7 @@ GameObject:
   - component: {fileID: 4581429694749068}
   - component: {fileID: 114397370791778014}
   - component: {fileID: 137962369890517574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cara
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +398,7 @@ GameObject:
   - component: {fileID: 4206303888385428}
   - component: {fileID: 114485981034228082}
   - component: {fileID: 137682244375856254}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cuerpo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +415,7 @@ GameObject:
   - component: {fileID: 4149578911386806}
   - component: {fileID: 114958887015424668}
   - component: {fileID: 137648812382040704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brazoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4748393828611830}
   - component: {fileID: 114694041870419208}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4188751155720712}
   - component: {fileID: 114550784928915142}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DedosDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +464,7 @@ GameObject:
   - component: {fileID: 4247511196865698}
   - component: {fileID: 114981987616006238}
   - component: {fileID: 137883301945710396}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: piernaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4803524879491986}
   - component: {fileID: 114426218732293794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKbrazoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4676155653390940}
   - component: {fileID: 114021161218333032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoIzq2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +513,7 @@ GameObject:
   - component: {fileID: 4675754192750382}
   - component: {fileID: 114497345993470684}
   - component: {fileID: 137221827720821674}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: manoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +530,7 @@ GameObject:
   - component: {fileID: 4686391502337380}
   - component: {fileID: 114171793574691958}
   - component: {fileID: 137413694184457124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cuerpoFondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4628941208704606}
   - component: {fileID: 114960395087048012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capucha3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4199409733383478}
   - component: {fileID: 114686822983635418}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capucha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444911735824810}
   - component: {fileID: 114924119171440598}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoIzq3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044808591972220}
   - component: {fileID: 114291347476219672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PulgarIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4036257594150142}
   - component: {fileID: 114846612455777910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DedosIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4629556321818202}
   - component: {fileID: 114644571294826800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,7 +642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4257908328938510}
   - component: {fileID: 114038876237697394}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capucha2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,7 +658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427939925233610}
   - component: {fileID: 114125494182256746}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PieDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4576669537766766}
   - component: {fileID: 114825897739697534}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4144269412751200}
   - component: {fileID: 114856735876209092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capucha4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4065297023985416}
   - component: {fileID: 114446097753705184}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cadera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,7 +722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4259068185450926}
   - component: {fileID: 114031632012992802}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoDer3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +739,7 @@ GameObject:
   - component: {fileID: 4858030887115326}
   - component: {fileID: 114554847410153358}
   - component: {fileID: 137657036613712528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: piernaDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4433026605815630}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Huesos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4085578007705802}
   - component: {fileID: 114409659741974548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4386937321659974}
   - component: {fileID: 114962094362055962}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Falda4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4223751886203294}
   - component: {fileID: 114857543336590868}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IKpiernaDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4182470385060516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894108730359834}
   - component: {fileID: 114925899655133760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PiernaIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4278462286819690}
   - component: {fileID: 114050561893357880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoDer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4201460020709098}
   - component: {fileID: 114752778596217704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TelaBrazoDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -876,7 +881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4837091823307084}
   - component: {fileID: 114882772333994154}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PieIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4102759763060296}
   - component: {fileID: 114068198368542464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MusloDer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405913987619702}
   - component: {fileID: 114237120226336660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BrazoIzq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -925,7 +930,7 @@ GameObject:
   - component: {fileID: 4081579996336992}
   - component: {fileID: 114852136752953338}
   - component: {fileID: 137700524473082194}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brazoDerFondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -940,7 +945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028031184532054}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +962,7 @@ GameObject:
   - component: {fileID: 4074259302781132}
   - component: {fileID: 114935752490364874}
   - component: {fileID: 137624805630697626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: brazoIzqFondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1684,8 +1689,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1270975589606784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0035883, y: -0.6838474, z: 0.09723119}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.859, y: -0.266, z: 0.09723119}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4182470385060516}
   - {fileID: 4433026605815630}
@@ -1789,6 +1794,51 @@ Transform:
   m_Father: {fileID: 4065297023985416}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 169.468}
+--- !u!50 &50314287586787356
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &61386860916067458
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.45, y: -2.71}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!95 &95440201654148858
 Animator:
   serializedVersion: 3
@@ -1835,7 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5846737
+  m_Length: 0.58467376
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4360943918059842}
   m_AttachedIK: {fileID: 0}
@@ -1851,7 +1901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.2551242
+  m_Length: 1.255124
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4628941208704606}
   m_AttachedIK: {fileID: 0}
@@ -1883,7 +1933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.87535316
+  m_Length: 0.8753532
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4069043076761060}
   m_AttachedIK: {fileID: 114857543336590868}
@@ -1951,6 +2001,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a11c331dcac8f47489ade585cf7d3360, type: 2}
   - {fileID: 11400000, guid: be971a85f0c25a94d911e4353068cf6c, type: 2}
   - {fileID: 11400000, guid: b873f46510689514f8c39573bce1aaf4, type: 2}
+--- !u!114 &114189466583131466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430c9d19f5ee77c4eb20aa5ef8c89081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementSmoothing: 0.05
+  m_FacingRight: 1
 --- !u!114 &114193193030168144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1963,7 +2026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.21000749
+  m_Length: 0.21000741
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4036257594150142}
   m_AttachedIK: {fileID: 0}
@@ -1979,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.21000735
+  m_Length: 0.21000744
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4188751155720712}
   m_AttachedIK: {fileID: 0}
@@ -2011,7 +2074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1605049
+  m_Length: 1.1605047
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4068616424891140}
   m_AttachedIK: {fileID: 114481068416745288}
@@ -2059,7 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.000018
+  m_Length: 1.0000186
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4073752373173106}
   m_AttachedIK: {fileID: 114426218732293794}
@@ -2134,7 +2197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.46815825
+  m_Length: 0.46815777
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4676155653390940}
   m_AttachedIK: {fileID: 0}
@@ -2187,7 +2250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5524841
+  m_Length: 0.5524842
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4417437868001292}
   m_AttachedIK: {fileID: 0}
@@ -2296,10 +2359,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000199
+  m_Length: 1.00002
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4105129256828610}
   m_AttachedIK: {fileID: 114481068416745288}
+--- !u!114 &114532998637565668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114550784928915142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2349,7 +2423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.5100006
+  m_Length: 1.5100008
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4226911982414978}
   m_AttachedIK: {fileID: 0}
@@ -2406,7 +2480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.73346525
+  m_Length: 0.73346496
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4576669537766766}
   m_AttachedIK: {fileID: 0}
@@ -2422,7 +2496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.5988278
+  m_Length: 0.5988281
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4748393828611830}
   m_AttachedIK: {fileID: 0}
@@ -2438,7 +2512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1392696
+  m_Length: 1.1392698
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4257908328938510}
   m_AttachedIK: {fileID: 0}
@@ -2486,7 +2560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.4000001
+  m_Length: 0.39999977
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4278462286819690}
   m_AttachedIK: {fileID: 0}
@@ -2502,7 +2576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1605049
+  m_Length: 1.1605057
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4896323145976248}
   m_AttachedIK: {fileID: 114426218732293794}
@@ -2644,7 +2718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000002
+  m_Length: 0.9999999
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4737284620684474}
   m_AttachedIK: {fileID: 0}
@@ -2713,7 +2787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.73346496
+  m_Length: 0.7334649
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4386937321659974}
   m_AttachedIK: {fileID: 0}
@@ -2729,7 +2803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7334651
+  m_Length: 0.73346496
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4629556321818202}
   m_AttachedIK: {fileID: 0}
@@ -2745,7 +2819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.43727908
+  m_Length: 0.43728
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4106506971746308}
   m_AttachedIK: {fileID: 0}
@@ -2761,7 +2835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.9245565
+  m_Length: 0.9245567
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4837091823307084}
   m_AttachedIK: {fileID: 114792934078002230}
@@ -2790,6 +2864,33 @@ MonoBehaviour:
   - {fileID: 4106506971746308}
   - {fileID: 4085578007705802}
   - {fileID: 4676155653390940}
+--- !u!114 &114945195090669368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08abecbbb70d6e4897d81f3b479b5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 114189466583131466}
+  animator: {fileID: 95440201654148858}
+  Rb: {fileID: 50314287586787356}
+  runSpeed: 4
+  safetyDistance: 1
+  passiveRange: 15
+  detectionRange: 6
+  attackRange: 1
+  status: 
+  horizontalMove: 0
+  platform: {fileID: 0}
+  minX: 0
+  maxX: 0
+  player: {fileID: 0}
+  attacking: 0
+  attack_cooldown: 1.1
 --- !u!114 &114958887015424668
 MonoBehaviour:
   m_ObjectHideFlags: 1
