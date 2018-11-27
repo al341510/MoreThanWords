@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
     public playerMagic storedMagic;
+    public float magicTime = 20;
 
     [SerializeField]
     private Text keyNumber;
