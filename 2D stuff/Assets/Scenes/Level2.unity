@@ -677,12 +677,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 861831564}
-    - target: {fileID: 114216818756320700, guid: 795896be81e569d49b6a6cfad263929d,
-        type: 2}
-      propertyPath: myFirstImage
-      value: 
-      objectReference: {fileID: 21300000, guid: a2bfeb29a2b016c40b4b06e76ff05aa4,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 795896be81e569d49b6a6cfad263929d, type: 2}
   m_IsPrefabAsset: 0

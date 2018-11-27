@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  myFirstImage: {fileID: 0}
+  myFirstImage: {fileID: 21300000, guid: 2f582d4b451670046ab12e33089d55e9, type: 3}
   mySecondImage: {fileID: 21300000, guid: 3ed5133a6e7b1b74abb819223aaf9eb9, type: 3}
   lerptime: 1
 --- !u!114 &114316481710625242
@@ -397,7 +397,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3ed5133a6e7b1b74abb819223aaf9eb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f582d4b451670046ab12e33089d55e9, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -619,8 +619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.011, y: -0.17}
-  m_SizeDelta: {x: 60.131, y: 45.01}
+  m_AnchoredPosition: {x: -2.2, y: -0.42}
+  m_SizeDelta: {x: 58.69, y: 38.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224702923537361906
 RectTransform:
