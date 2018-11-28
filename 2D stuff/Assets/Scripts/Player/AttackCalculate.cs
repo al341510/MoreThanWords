@@ -10,7 +10,7 @@ public class AttackCalculate : MonoBehaviour {
 	private Player player; 
 	private Health health;
 	public float kallumAtttackRange = 2f;
-
+	public Animator animator;
 	int direction;
 
 
@@ -46,6 +46,7 @@ public class AttackCalculate : MonoBehaviour {
 				{
 					damageGiven = 0;
 					//stun
+					StartCoroutine("AttackFailAnimation");
 				}					
 				else if (player.activeMagic.ToString() == "FIRE") //best combination
 					damageGiven = 20; 
@@ -59,6 +60,7 @@ public class AttackCalculate : MonoBehaviour {
 				{
 					damageGiven = 0;
 					//stun
+					StartCoroutine("AttackFailAnimation");
 				}					
 				else if (player.activeMagic.ToString() == "ICE") //best combination
 					damageGiven = 20;
@@ -75,7 +77,6 @@ public class AttackCalculate : MonoBehaviour {
 			}
 			break;
 		}
-
 		enemy.TakeDamage(damageGiven);
 	}
 
@@ -109,5 +110,12 @@ public class AttackCalculate : MonoBehaviour {
 		}
 
 		health.CurrentValue -= damage;
+	}
+
+	IEnumerator AttackFailAnimation() //activates and deactivates parry with a little delay to avoid bugs and calcules
+	{
+		animator.SetBool("AttackFail",true);
+		yield return new WaitForSeconds (0.3f);
+		animator.SetBool("AttackFail",false);
 	}
 }
