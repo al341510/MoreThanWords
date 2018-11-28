@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Anima2D;
 
 // Este SCRIPT es el equivalente a PlayerMovement para los enemigos que patrullan las plataformas
 
@@ -177,5 +178,10 @@ public class NPCPatrolMovement : MonoBehaviour {
             }
         }
         controller.Move(horizontalMove * Time.fixedDeltaTime * runSpeed);
+
+        /*if (horizontalMove != 0 && this.name == "Heavy")
+        {
+            SpriteMeshType head = this.transform.GetChild(0).gameObject.GetComponent<SpriteMeshType> ();
+        }*/
     }
 }
