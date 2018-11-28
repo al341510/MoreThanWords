@@ -12,6 +12,7 @@ public class ArrowForce : MonoBehaviour {
     float x;
     float y;
     [SerializeField] Rigidbody2D rb;
+    private bool launched;
 
     private void Start()
     {
@@ -20,13 +21,18 @@ public class ArrowForce : MonoBehaviour {
 
     private void Awake()
     {
+        launched = false;
         rb = this.GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
         //LaunchArrow();
     }
 
     // Update is called once per frame
     void Update () {
-        UpdateAngle();
+        if (launched)
+        {
+            UpdateAngle();
+        }
     }
 
     void StartingAngle()
@@ -42,8 +48,8 @@ public class ArrowForce : MonoBehaviour {
 
     void LaunchArrow()
     {
-        Quaternion rotation = Quaternion.Euler(0, 0, angle); ;
-        this.transform.rotation *= rotation;
+        launched = true;
+        rb.isKinematic = false;
         rb.velocity = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle) * force, Mathf.Sin(Mathf.Deg2Rad * angle) * force, 0);
     }
 
@@ -56,7 +62,9 @@ public class ArrowForce : MonoBehaviour {
     public void SetAngle(float angle)
     {
         this.angle = angle;
+        Quaternion rotation = Quaternion.Euler(0, 0, angle); ;
+        this.transform.rotation *= rotation;
         //Debug.Log(angle);
-        LaunchArrow();
+        Invoke("LaunchArrow", 0.35f);
     }
 }
