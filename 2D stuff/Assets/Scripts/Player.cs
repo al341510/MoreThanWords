@@ -33,6 +33,8 @@ public class Player : MonoBehaviour
 	public playerMagic activeMagic;
     public playerMagic storedMagic;
     public float magicTime = 20f;
+    private string storedMagicFlag = null;
+    private bool refreshMagic = false;
 
     [SerializeField]
     private Text keyNumber;
@@ -73,6 +75,18 @@ public class Player : MonoBehaviour
             health.CurrentValue += 20;
         }
 
+        if (Input.GetButtonDown("PickUpMagic")) {
+
+            if(storedMagicFlag == "Fire")
+            {
+                storedMagic = playerMagic.FIRE;
+            }
+            else if(storedMagicFlag == "Ice")
+            {
+                storedMagic = playerMagic.ICE;
+            }
+        }
+
         if (isAttacking)
 		{
 			if (comboCD > 0)
@@ -98,12 +112,40 @@ public class Player : MonoBehaviour
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
 		animator.SetFloat("VelocityY",Rb.velocity.y); //detects the Y speed for jump animation
 		bool jumpButton = Input.GetButtonDown("Jump");
+
+
 		bool useMagicButton = Input.GetButtonDown("UseMagic"); //e
+
+        if (useMagicButton) {
+            if (storedMagic.ToString() == "FIRE")
+            {
+                if (activeMagic.ToString() == "FIRE")
+                {
+                    refreshMagic = true;
+                }
+                else
+                {
+                    activeMagic = playerMagic.FIRE;
+                }
+            }
+            else if(storedMagic.ToString() == "ICE")
+            {
+                if (activeMagic.ToString() == "ICE")
+                {
+                    refreshMagic = true;
+                }
+                else
+                {
+                    activeMagic = playerMagic.ICE;
+                }
+            }
+            storedMagic = playerMagic.NEUTRAL;
+        }
 
 		//use magic
 		if (useMagicButton && activeMagic.ToString() == "NEUTRAL" && storedMagic.ToString() != "NEUTRAL")
 		{
-			StartCoroutine("UseMagic");
+			//StartCoroutine("UseMagic");
 		}
 
 		if (!playerIsCovering)
@@ -159,15 +201,28 @@ public class Player : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.tag == "PowerUpFire" && Input.GetButtonDown("PickUpMagic"))
+		if (other.tag == "PowerUpFire")
 		{
-			storedMagic = playerMagic.FIRE;
+            storedMagicFlag = "Fire";
 		}
-		if (other.tag == "PowerUpIce" && Input.GetButtonDown("PickUpMagic"))
+		if (other.tag == "PowerUpIce")
 		{
-			storedMagic = playerMagic.ICE;
+            storedMagicFlag = "Ice";
 		}
 	}
+
+    void OnTriggerExit2D() {
+        storedMagicFlag = null;
+    }
+
+    public void beNeutral() {
+        activeMagic = playerMagic.NEUTRAL;
+    }
+
+    public bool ReFreshMagic{
+        get{ return refreshMagic; }
+        set{ refreshMagic = value; }
+    }
 
 	private IEnumerator UseMagic () //change player's state and after 5 seconds return to normal
 	{
@@ -185,7 +240,7 @@ public class Player : MonoBehaviour
 			iceParticles.SetActive(true);
 		}
 		storedMagic = Player.playerMagic.NEUTRAL;
-		yield return new WaitForSeconds(5f);
+		yield return new WaitForSeconds(magicTime);
 		//return to normal state
 		activeMagic = Player.playerMagic.NEUTRAL;
 		iceParticles.SetActive(false);

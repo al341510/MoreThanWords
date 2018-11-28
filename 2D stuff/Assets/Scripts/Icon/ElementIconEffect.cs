@@ -24,6 +24,8 @@ public class ElementIconEffect : MonoBehaviour {
     private bool newMagic1 = false;
     private bool newMagic2 = false;
 
+    private float currentFill;
+
     // Use this for initialization
     void Start () {
         magicTime = GetComponent<Image>();
@@ -44,22 +46,33 @@ public class ElementIconEffect : MonoBehaviour {
             {
                 timeE = time;
                 newMagic2 = false;
+                player.iceParticles.SetActive(false);
             }
+
+            if (player.ReFreshMagic != false)
+            {
+                timeE = time;
+                player.ReFreshMagic = false;
+            }
+
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = myFirstImage;
+            player.fireParticles.SetActive(true);
 
             if (timeFlag != false)
             {
-                StartCoroutine(Time());
+                 StartCoroutine(duration());
+                 //Invoke("duration", 1);
             }
             else if (timeE < 1)
             {
 
                 magicTime.fillAmount = 1;
                 this.GetComponent<Image>().enabled = false;
-                player.activeMagic = Player.playerMagic.NEUTRAL;
+                player.beNeutral();
                 timeE = time;
                 newMagic1 = false;
+                player.fireParticles.SetActive(false);
             }
         }
         else if (player.activeMagic.ToString() == "ICE")
@@ -69,27 +82,35 @@ public class ElementIconEffect : MonoBehaviour {
             if (newMagic1 != false) {
                 timeE = time;
                 newMagic1 = false;
+                player.fireParticles.SetActive(false);
+            }
+
+            if (player.ReFreshMagic != false) {
+                timeE = time;
+                player.ReFreshMagic = false;
             }
             this.GetComponent<Image>().enabled = true;
             this.GetComponent<Image>().sprite = mySecondImage;
+            player.iceParticles.SetActive(true);
 
             if (timeFlag != false)
             {
-                StartCoroutine(Time());
+                StartCoroutine(duration());
             }
             else if (timeE < 1)
             {
                 magicTime.fillAmount = 1;
                 this.GetComponent<Image>().enabled = false;
-                player.activeMagic = Player.playerMagic.NEUTRAL;
+                player.beNeutral();
                 timeE = time;
                 newMagic2 = false;
+                player.iceParticles.SetActive(false);
             }
         }
         
     }
 
-    IEnumerator Time()
+    IEnumerator duration()
     {
         magicTime.fillAmount = ((timeE - 1) / time);
         timeE -= 1;
