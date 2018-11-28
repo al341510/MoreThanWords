@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public float enemyHealth = 100f;
+	int enemyHealth = 100;
 	public enum enemyType {NEUTRAL, FIRE, ICE};
-	public int enemyMagic;
+	public enemyType enemyMagic;
 
-	//1 for neutral
-	//2 for ice 
-	//3 for fire
-
-	public void TakeDamage(float damage)
+	public void TakeDamage(int damage)
 	{
 		enemyHealth -= damage;
-		print(damage + "damage taken!");
+		//print(damage + " damage taken!");
 		if (enemyHealth <= 0)
 		{
-			print("dead");
+			//print("dead");
+			Destroy(gameObject);
 		}
 	}
+
+	//attack functions here 
 }

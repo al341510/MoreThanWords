@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Health health;
 
-    private float startHealth = 100f;
+    private int startHealth = 100;
+
+	private AttackCalculate AttackCalc; //script that makes attack calcules
 
     public CharacterController2D controller;
 
@@ -26,10 +28,11 @@ public class Player : MonoBehaviour
 	private float attackPower = 1f;
 
 	[SerializeField] private bool isAttacking;
+
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
     public playerMagic storedMagic;
-    public float magicTime = 20;
+    public float magicTime = 20f;
 
     [SerializeField]
     private Text keyNumber;
@@ -45,10 +48,13 @@ public class Player : MonoBehaviour
     float comboCDStart = 0.3f;
 	private float comboCD;
 
+	public GameObject fireParticles;
+	public GameObject iceParticles;
+
 	void Start()
 	{
+		AttackCalc = GetComponent<AttackCalculate>();
 		isAttacking = false;
-		activeMagic = playerMagic.NEUTRAL;
 		comboCD = comboCDStart;
         health.setHealth(startHealth, startHealth);
     }
@@ -58,22 +64,13 @@ public class Player : MonoBehaviour
 	{
         keyNumber.text = collectedKey.ToString() + "/" + keyOnMap.ToString();
         //Test health
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            health.CurrentValue -= 20f;
+            health.CurrentValue -= 20;
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            health.CurrentValue += 20f;
-        }
-
-        //use magic
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (storedMagic.ToString() != "NEUTRAL") { 
-                activeMagic = storedMagic;
-                storedMagic = playerMagic.NEUTRAL;
-            }
+            health.CurrentValue += 20;
         }
 
         if (isAttacking)
@@ -94,21 +91,27 @@ public class Player : MonoBehaviour
 				}
 			}
 		}
-
-		else
+		else //isAttacking = false
 			horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
-		
+
+
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
 		animator.SetFloat("VelocityY",Rb.velocity.y); //detects the Y speed for jump animation
 		bool jumpButton = Input.GetButtonDown("Jump");
-		//bool magicButton = Input.GetButtonDown("UseMagic");
+		bool useMagicButton = Input.GetButtonDown("UseMagic"); //e
+
+		//use magic
+		if (useMagicButton && activeMagic.ToString() == "NEUTRAL" && storedMagic.ToString() != "NEUTRAL")
+		{
+			StartCoroutine("UseMagic");
+		}
 
 		if (!playerIsCovering)
 		{	
 			bool attackButton = Input.GetButtonDown("Attack");
 			if (attackButton && horizontalMove == 0 && Rb.velocity.y == 0) //if press attack 
-			{			
-				//CalculateImpact();
+			{
+				AttackCalc.CalculateImpact(); //raycast and hit handler
 				if (!isAttacking) //and we were on idle
 				{
 					isAttacking = true;
@@ -131,23 +134,14 @@ public class Player : MonoBehaviour
 				playerIsCovering = true;
 				animator.SetBool("IsCovering", true);
 			}
-			/*
-			bool pickUpButton = Input.GetButtonDown("PickUpMagic");
-			if (pickUpButton)
-			{
-				print("pickupmagic");
-				//comprobar si se puede recoger una magia
-				//detectar el tipo
-				//si se puede:
-				//si hielo, storedMagic = playerMagic.ICE .. etc
-			}*/
 		}
 
-		if (Input.GetButtonUp("Cover") && playerIsCovering)
+		if (Input.GetButtonUp("Cover") && playerIsCovering) //stop covering
 		{
 			playerIsCovering = false;
 			animator.SetBool("IsCovering", false);
 		}
+			
 
 	}
 
@@ -163,111 +157,40 @@ public class Player : MonoBehaviour
 		jump = false;
 	}
 
-	IEnumerator UseMagic(playerMagic selectedMagic)
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		//cambiar el estado del personaje
-		//iniciar particulas
-		//particleSystem.Invoke(ICE)
+		if (other.tag == "PowerUpFire" && Input.GetButtonDown("PickUpMagic"))
+		{
+			storedMagic = playerMagic.FIRE;
+		}
+		if (other.tag == "PowerUpIce" && Input.GetButtonDown("PickUpMagic"))
+		{
+			storedMagic = playerMagic.ICE;
+		}
+	}
+
+	private IEnumerator UseMagic () //change player's state and after 5 seconds return to normal
+	{
+		//print("entering coroutine");
+		//change character state
+		GameObject particles;
+		if (storedMagic.ToString() == "FIRE")
+		{
+			activeMagic = Player.playerMagic.FIRE;
+			fireParticles.SetActive(true);
+		} 
+		else
+		{
+			activeMagic = Player.playerMagic.ICE;
+			iceParticles.SetActive(true);
+		}
+		storedMagic = Player.playerMagic.NEUTRAL;
 		yield return new WaitForSeconds(5f);
-		//desactivar particulas
-		activeMagic = playerMagic.NEUTRAL;
-	}
+		//return to normal state
+		activeMagic = Player.playerMagic.NEUTRAL;
+		iceParticles.SetActive(false);
+		fireParticles.SetActive(false);
+		//print("exit coroutine");
 
-	/*
-	void CalculateImpact ()
-	{
-		RaycastHit hit;
-		Ray ray;
-		//ray si hay enemigo
-		//si lo hay
-		//GiveDamage(enemigo);
 	}
-	*/
-	/*
-	void RecieveDamage (Enemy enemy)
-	{
-		float damage;
-		switch (enemy.enemyMagic)
-		{
-		case (Enemy.enemyType.NEUTRAL):
-			{
-				damage = 1f;
-			}
-			break;
-		case (Enemy.enemyType.ICE):
-			{
-				if (activeMagic == playerMagic.ICE)
-					damage = 2f;
-				else
-					damage = 1.5f;								
-			}
-			break;
-		default: //FIRE
-			{
-				if (activeMagic == playerMagic.FIRE)
-					damage = 2f;
-				else
-					damage = 1.5f;					
-			}
-			break;
-		}
-
-        health.CurrentValue -= (int)damage;
-	}
-
-	void GiveDamage (Enemy enemy)
-	{
-		float damageGiven;
-		switch (enemy.enemyMagic)
-		{
-		case (Enemy.enemyType.ICE):
-			{
-				if (activeMagic == playerMagic.ICE)
-				{
-					damageGiven = 0f;
-					//stun
-				}					
-				else if (activeMagic == playerMagic.FIRE)
-					damageGiven = 3f;
-				else //player is neutral
-					damageGiven = 0.5f;
-			}
-			break;
-		case (Enemy.enemyType.FIRE):
-			{
-				if (activeMagic == playerMagic.FIRE)
-				{
-					damageGiven = 0f;
-					//stun
-				}					
-				else if (activeMagic == playerMagic.ICE)
-					damageGiven = 3f;
-				else //player is neutral
-					damageGiven = 0.5f;			
-			}
-			break;
-		default: //NEUTRAL
-			{
-				if (activeMagic == playerMagic.FIRE || activeMagic == playerMagic.ICE)
-					damageGiven = 1.5f;
-				else //player is neutral
-					damageGiven = 1f;				
-			}
-			break;
-		}
-
-		enemy.TakeDamage(damageGiven);
-	}
-	*/
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "PowerUpFire")
-        {
-            storedMagic = playerMagic.FIRE;
-        }
-        if (other.tag == "PowerUpIce")
-        {
-            storedMagic = playerMagic.ICE;
-        }
-    }
 }
