@@ -32,19 +32,29 @@ public class Player : MonoBehaviour
 	public enum playerMagic {NEUTRAL, FIRE, ICE};
 	public playerMagic activeMagic;
     public playerMagic storedMagic;
+
+    //Time how long magic is active
     public float magicTime = 20f;
+
+    //Flag to safe storedmagic
     private string storedMagicFlag = null;
+
+    //important for refreshing Magic when active magic and storedmagic is the same
+    //is use in ElementIconEffect
     private bool refreshMagic = false;
 
+    //How many keys are in the map,and how many you have (default 10/10) 
     [SerializeField]
     private Text keyNumber;
 
     [SerializeField]
     private Image elementIcon;
 
+    //numbers of key in on map, has to put manuell
     [SerializeField]
     private int keyOnMap;
 
+    //numbers of the collected key
     private int collectedKey = 0;
 
     float comboCDStart = 0.3f;
@@ -75,6 +85,7 @@ public class Player : MonoBehaviour
             health.CurrentValue += 20;
         }
 
+        // set element into storedMagic, depends on OntriggerEnter2D and Exit
         if (Input.GetButtonDown("PickUpMagic")) {
 
             if(storedMagicFlag == "Fire")
@@ -116,6 +127,10 @@ public class Player : MonoBehaviour
 
 		bool useMagicButton = Input.GetButtonDown("UseMagic"); //e
 
+        /*
+         When activate magic, check storadMagic and use that magic, if same element is in use set refreshMagic as true (important for
+         ElementIconEffect). After activating set storadmagig to Neutral
+         */
         if (useMagicButton) {
             if (storedMagic.ToString() == "FIRE")
             {
@@ -142,11 +157,11 @@ public class Player : MonoBehaviour
             storedMagic = playerMagic.NEUTRAL;
         }
 
-		//use magic
+		/*use magic
 		if (useMagicButton && activeMagic.ToString() == "NEUTRAL" && storedMagic.ToString() != "NEUTRAL")
 		{
 			//StartCoroutine("UseMagic");
-		}
+		}*/
 
 		if (!playerIsCovering)
 		{	
@@ -199,6 +214,9 @@ public class Player : MonoBehaviour
 		jump = false;
 	}
 
+    /*
+     set Flag to the element where the player is staying at
+         */
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "PowerUpFire")
@@ -211,19 +229,23 @@ public class Player : MonoBehaviour
 		}
 	}
 
+    // set flag to null by exit
     void OnTriggerExit2D() {
         storedMagicFlag = null;
     }
 
+    //actually this is a setter (is in use in ElementIconEffect)
     public void beNeutral() {
         activeMagic = playerMagic.NEUTRAL;
     }
 
+    //getter and setter for refreshmagic
     public bool ReFreshMagic{
         get{ return refreshMagic; }
         set{ refreshMagic = value; }
     }
 
+    /*This is actually done in elemenIconEffect
 	private IEnumerator UseMagic () //change player's state and after 5 seconds return to normal
 	{
 		//print("entering coroutine");
@@ -247,5 +269,5 @@ public class Player : MonoBehaviour
 		fireParticles.SetActive(false);
 		//print("exit coroutine");
 
-	}
+	}*/
 }
