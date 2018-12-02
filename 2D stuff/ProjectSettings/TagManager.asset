@@ -9,6 +9,7 @@ TagManager:
   - Italics
   - PowerUpFire
   - PowerUpIce
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Platform
   - Enemies
   - Player
-  - 
-  - 
+  - UsedArrows
+  - Arrows
   - 
   - 
   - 
