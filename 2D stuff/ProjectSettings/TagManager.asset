@@ -10,6 +10,9 @@ TagManager:
   - PowerUpFire
   - PowerUpIce
   - Platform
+  - doorLevel2
+  - doorLevel1
+  - doorLevel0
   layers:
   - Default
   - TransparentFX

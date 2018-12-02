@@ -9,18 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
-    path: Assets/Scenes/Level1.unity
+    path: Assets/Scenes/TestEnemies.unity
     guid: c673a41dda3c21648baf80b8b3791732
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: "Assets/\xC0lex/Level0.unity"
     guid: 2d716293361a5e2458119696b476438d
   - enabled: 1
-    path: Assets/Scenes/TrueLevel1.unity
+    path: Assets/Scenes/Official/Level1.unity
     guid: 5870d032e61884c4e98404a7707918a4
   - enabled: 1
-    path: Assets/Scenes/TrueLevel1_2.unity
+    path: Assets/Scenes/Official/Level2.unity
     guid: 84f198229cfaf4041bb4b1e9d5c5d96e
   - enabled: 1
-    path: Assets/Scenes/TrueLevel2.unity
+    path: Assets/Scenes/Official/Level3.unity
     guid: ad32481896ee94144a63e3fa213809cd
   m_configObjects: {}

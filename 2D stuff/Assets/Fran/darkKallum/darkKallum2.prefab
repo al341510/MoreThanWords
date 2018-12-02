@@ -1973,6 +1973,7 @@ MonoBehaviour:
   player: {fileID: 0}
   attacking: 0
   attack_cooldown: 1.1
+  attack_lenght: 1.1
 --- !u!114 &114373691801150946
 MonoBehaviour:
   m_ObjectHideFlags: 1
