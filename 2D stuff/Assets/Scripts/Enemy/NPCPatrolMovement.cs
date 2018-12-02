@@ -42,7 +42,8 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     Attacker attacker;
 
-    public float attack_cooldown = 1.1f;
+    public float attack_cooldown = 1.1f; // Tiempo entre ataques
+    public float attack_lenght = 1.1f; // Tiempo que tarda en realizar la animación de ataque
 
     float timer;
 
@@ -123,7 +124,7 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > attackRange && this.transform.position.x - safetyDistance > minX && this.transform.position.x + safetyDistance < maxX)
             {
-                Debug.Log("entra");
+                //Debug.Log("entra");
                 if (this.transform.position.x + 0.2 - player.transform.position.x <  0)
                 {
                     horizontalMove = +1;
@@ -152,7 +153,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                 //MIRA HACIA EL PLAYER
                 controller.LookPlayer(this.transform.position.x, player.transform.position.x, attacking);
                 //HAY CONTACTO VISUAL ENTRE EL ARQUERO Y EL JUGADOR
-                linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1<<9));
+                linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1 << 9 | 1 << 11 | 1 << 12));
                 if(linecast.collider.gameObject.name == "Kallum")
                 {
                     if (!attacking && Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < attackRange)
@@ -160,7 +161,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                         attacker.Attack(transform.position.x, transform.position.y, transform.rotation.y);
                         //Debug.Log(transform.rotation);
                         attacking = true;
-                        animator.SetBool("Attack", attacking);
+                        animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
                     }
                 }
             }
@@ -170,6 +171,7 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             horizontalMove = 0;
             timer -= Time.fixedDeltaTime;
+            animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
             if (timer<= 0)
             {
                 attacking = false;

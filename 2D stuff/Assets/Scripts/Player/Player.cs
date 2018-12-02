@@ -270,4 +270,9 @@ public class Player : MonoBehaviour
 		//print("exit coroutine");
 
 	}*/
+
+    public bool GetPlayerIsCovering()
+    {
+        return playerIsCovering;
+    }
 }
