@@ -42,7 +42,8 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     Attacker attacker;
 
-    public float attack_cooldown = 1.1f;
+    public float attack_cooldown = 1.1f; // Tiempo entre ataques
+    public float attack_lenght = 1.1f; // Tiempo que tarda en realizar la animación de ataque
 
     float timer;
 
@@ -160,7 +161,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                         attacker.Attack(transform.position.x, transform.position.y, transform.rotation.y);
                         //Debug.Log(transform.rotation);
                         attacking = true;
-                        animator.SetBool("Attack", attacking);
+                        animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
                     }
                 }
             }
@@ -170,6 +171,7 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             horizontalMove = 0;
             timer -= Time.fixedDeltaTime;
+            animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
             if (timer<= 0)
             {
                 attacking = false;
