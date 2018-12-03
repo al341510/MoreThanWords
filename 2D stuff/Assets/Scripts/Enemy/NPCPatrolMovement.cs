@@ -47,6 +47,8 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     float timer;
 
+    public float death_lenght = 1f;
+
     void Start () {
 
         /*float centerX = platform.GetComponent<BoxCollider2D>().bounds.center.x;
@@ -94,15 +96,27 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove) * runSpeed);
-        if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < detectionRange)
+        if(status != "Death")
         {
-            status = "combat";
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove) * runSpeed);
+            if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < detectionRange)
+            {
+                status = "combat";
+            }
+            else if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > passiveRange && status != "noCombat")
+            {
+                status = "noCombat";
+                horizontalMove *= -1;
+            }
         }
-        else if (Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) > passiveRange && status != "noCombat")
+        else
         {
-            status = "noCombat";
-            horizontalMove *= -1;
+            animator.SetFloat("Speed", 0);
+            death_lenght -= Time.deltaTime;
+            if (death_lenght < 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 
@@ -185,5 +199,11 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             SpriteMeshType head = this.transform.GetChild(0).gameObject.GetComponent<SpriteMeshType> ();
         }*/
+    }
+
+    public void Death()
+    {
+        animator.SetBool("Death", true);
+        status = "Death";
     }
 }
