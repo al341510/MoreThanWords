@@ -970,6 +970,7 @@ MonoBehaviour:
   attacking: 0
   attack_cooldown: 1.1
   attack_lenght: 1.1
+  death_lenght: 1
 --- !u!61 &233735475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4739,6 +4740,24 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843e903643395364dbe8608606fd0e8c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1100247711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1181078864938284, guid: 50ac09a1be116254eb95bdf48048a93a,
+    type: 2}
+  m_PrefabInternal: {fileID: 663931476}
+--- !u!114 &1100247715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1100247711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbcdda838edff84b8381aaeecbf2d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 10
+  maxSpeed: 30
 --- !u!1 &1115848874
 GameObject:
   m_ObjectHideFlags: 0
