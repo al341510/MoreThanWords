@@ -14,8 +14,9 @@ public class Enemy : MonoBehaviour {
 		//print(damage + " damage taken!");
 		if (enemyHealth <= 0)
 		{
-			//print("dead");
-			Destroy(gameObject);
+            //print("dead");
+            //Destroy(gameObject);
+            this.GetComponent<NPCPatrolMovement>().Death();
 		}
 	}
 
