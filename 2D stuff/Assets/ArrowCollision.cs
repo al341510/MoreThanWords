@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ArrowCollision : MonoBehaviour {
 
+    private GameObject enemyReference;
+
 	// Use this for initialization
 	void Awake () {
 
@@ -39,6 +41,7 @@ public class ArrowCollision : MonoBehaviour {
         //COLLISION WITH THE PLAYER
         if (collision.transform.tag == "Player" && !collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS NOT COVERING
         {
+            collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
             Destroy(this.gameObject);
             //Debug.Log("hit"); HACER DAÑO AQUI
         }
@@ -62,5 +65,10 @@ public class ArrowCollision : MonoBehaviour {
     private void CollisionPlayer()
     {
 
+    }
+
+    public void SetEnemyReference(GameObject gameObject)
+    {
+        enemyReference = gameObject;
     }
 }

@@ -32,6 +32,7 @@ public class NPCArcherAttack : Attacker {
 
         angulo = Mathf.Atan2(yDiff, xDiff) * 180 / Mathf.PI;
         newArrow = Instantiate(arrow, new Vector3(x + addX, y + 0.5f, 0), Quaternion.Euler(0, direction, 0)) as GameObject;
+        newArrow.GetComponent<ArrowCollision>().SetEnemyReference(this.gameObject);
         //Debug.Log(direction);
         if (direction < 0.01)
         {
