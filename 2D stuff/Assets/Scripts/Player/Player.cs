@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
 	public Rigidbody2D Rb;
 
 	public float runSpeed = 40f;
-	private float maxSpeed = 30f;
 
 	float horizontalMove = 0f; //from -1 to 1
 	bool jump = false;
@@ -201,9 +200,7 @@ public class Player : MonoBehaviour
 	void FixedUpdate() 
 	{
 			// Trying to Limit Speed
-			if(Rb.velocity.magnitude > maxSpeed){
-				Rb.velocity = Vector3.ClampMagnitude(Rb.velocity, maxSpeed);
-			}
+
 			// Move our character
 			controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
 			////fixedDeltaTime es el tiempo desde la ultima vez que se llamó a la funión (así funciona igual de bien independientemente de cada cuanto tiempo se llame a fixedUpdate (funciona igual a 30fps que a 60fps)

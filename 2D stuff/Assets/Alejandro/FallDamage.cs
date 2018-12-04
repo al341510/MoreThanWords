@@ -10,7 +10,9 @@ public class FallDamage : MonoBehaviour {
 	public float maxSpeed;
 
 	private float lastSpeed;
-	private float maxHealth; //¿?
+
+	public Health health;
+	private float maxHealth = 100f; //¿?
 
 	private Rigidbody2D rb;
 	// Use this for initialization
@@ -25,8 +27,7 @@ public class FallDamage : MonoBehaviour {
 			if (lastSpeed < -maxSpeed) {
 				//matar
 
-
-				//health.setHealth(0, maxHealth);
+				health.CurrentValue = 0;
 
 
 				//Debug.Log ("killed");
@@ -34,10 +35,10 @@ public class FallDamage : MonoBehaviour {
 			else if (lastSpeed < -minSpeed) {
 				float damage = maxHealth * (-lastSpeed - minSpeed) / (maxSpeed - minSpeed);
 
-				//health.setHealth(currentHealth - damage, maxHealth); 
+				health.CurrentValue -= damage;
 
-				Debug.Log ("damaged");
-				Debug.Log (damage);
+				//Debug.Log ("damaged");
+				//Debug.Log (damage);
 				//hacer daño
 			}
 		}
