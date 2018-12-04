@@ -167,7 +167,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                 //RANGO DE ESPERA O ATAQUE -> SE QUEDA QUIETO
                 horizontalMove = 0;
                 //MIRA HACIA EL PLAYER
-                controller.LookPlayer(this.transform.position.x, player.transform.position.x, attacking);
+                controller.LookPlayer(this.transform.position.x, player.transform.position.x, attacking && !cancelAttack);
                 //HAY CONTACTO VISUAL ENTRE EL ARQUERO Y EL JUGADOR
                 linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1 << 9 | 1 << 11 | 1 << 12));
 				if(linecast.collider.gameObject.tag == "Player")
