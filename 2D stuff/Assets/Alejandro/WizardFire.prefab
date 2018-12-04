@@ -1997,6 +1997,7 @@ MonoBehaviour:
   attacking: 0
   attack_cooldown: 1.1
   attack_lenght: 1.1
+  death_lenght: 1
 --- !u!114 &114071869142093732
 MonoBehaviour:
   m_ObjectHideFlags: 1
