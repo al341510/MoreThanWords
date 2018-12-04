@@ -328,11 +328,11 @@ GameObject:
   - component: {fileID: 114175391725656384}
   - component: {fileID: 95440201654148858}
   - component: {fileID: 50314287586787356}
-  - component: {fileID: 114103886470640456}
   - component: {fileID: 61386860916067458}
   - component: {fileID: 114945195090669368}
   - component: {fileID: 114189466583131466}
-  - component: {fileID: 114532998637565668}
+  - component: {fileID: 114907950927010446}
+  - component: {fileID: 114015394553523900}
   m_Layer: 9
   m_Name: Wizard
   m_TagString: Untagged
@@ -1858,6 +1858,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114015394553523900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMagic: 0
 --- !u!114 &114021161218333032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1938,31 +1950,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4069043076761060}
   m_AttachedIK: {fileID: 114857543336590868}
---- !u!114 &114103886470640456
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1270975589606784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eefb67fa19780749a4f6bc0fd484e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackScript: {fileID: 0}
-  type: 0
-  brazoDer: {fileID: 0}
-  brazoDerFondo: {fileID: 0}
-  brazoIzq: {fileID: 0}
-  brazoIzqFondo: {fileID: 0}
-  cuerpo: {fileID: 0}
-  cuerpoFondo: {fileID: 0}
-  brazoDerR: {fileID: 0}
-  brazoDerFondoR: {fileID: 0}
-  brazoIzqR: {fileID: 0}
-  brazoIzqFondoR: {fileID: 0}
-  cuerpoR: {fileID: 0}
-  cuerpoFondoR: {fileID: 0}
 --- !u!114 &114125494182256746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2389,18 +2376,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4105129256828610}
   m_AttachedIK: {fileID: 114481068416745288}
---- !u!114 &114532998637565668
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1270975589606784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mType: 0
 --- !u!114 &114550784928915142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2818,6 +2793,17 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4386937321659974}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114907950927010446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270975589606784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114917185512386284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2919,6 +2905,7 @@ MonoBehaviour:
   attacking: 0
   attack_cooldown: 1.1
   attack_lenght: 1.1
+  death_lenght: 1
 --- !u!114 &114958887015424668
 MonoBehaviour:
   m_ObjectHideFlags: 1
