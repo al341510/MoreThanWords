@@ -186,6 +186,7 @@ public class NPCPatrolMovement : MonoBehaviour {
             horizontalMove = 0;
             timer -= Time.fixedDeltaTime;
             animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
+            //this.GetComponent<Enemy>().CalculateImpact();
             if (timer<= 0)
             {
                 attacking = false;

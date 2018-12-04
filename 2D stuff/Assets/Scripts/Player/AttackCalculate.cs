@@ -33,7 +33,7 @@ public class AttackCalculate : MonoBehaviour {
 			direction = -1;
 		
 		RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.right * direction, kallumAtttackRange, enemyLayer);
-		//Debug.DrawRay(transform.position, Vector2.right, Color.green);
+		//Debug.DrawRay(transform.position, Vector2.right, Color.red);
 		if (hitInfo.collider != null)
 		{
 			GiveDamage(hitInfo.collider.gameObject.GetComponent<Enemy>());
