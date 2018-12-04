@@ -48,7 +48,7 @@ public class ArrowCollision : MonoBehaviour {
         }
         else if (collision.transform.tag == "Player" && collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS COVERING
         {
-            if (collision.gameObject.transform.rotation.y == this.gameObject.transform.rotation.y)
+            if (!(collision.gameObject.transform.rotation.y == this.gameObject.transform.rotation.y))
             {
                 collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
                 Destroy(this.gameObject);
