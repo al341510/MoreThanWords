@@ -41,14 +41,24 @@ public class ArrowCollision : MonoBehaviour {
         //COLLISION WITH THE PLAYER
         if (collision.transform.tag == "Player" && !collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS NOT COVERING
         {
+            
             collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
             Destroy(this.gameObject);
             //Debug.Log("hit"); HACER DAÑO AQUI
         }
-        else if (collision.transform.tag == "Player" && collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYE IS COVERING
+        else if (collision.transform.tag == "Player" && collision.transform.GetComponent<Player>().GetPlayerIsCovering()) //PLAYER IS COVERING
         {
-            this.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-0.2f);
-            this.gameObject.layer = 11;
+            if (!(collision.gameObject.transform.rotation.y == this.gameObject.transform.rotation.y))
+            {
+                collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -0.2f);
+                this.gameObject.layer = 11;
+            }
+
             //Debug.Log("Blocked");
         }
         else if (collision.transform.tag == "Platform")
