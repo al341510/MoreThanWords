@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 114426861774755120}
   - component: {fileID: 114193257205524234}
   m_Layer: 9
-  m_Name: Archer
+  m_Name: archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1639,6 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: 100
   enemyMagic: 0
 --- !u!114 &114194565832204508
 MonoBehaviour:

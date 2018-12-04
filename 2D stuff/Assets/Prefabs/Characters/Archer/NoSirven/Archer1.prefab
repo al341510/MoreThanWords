@@ -1569,6 +1569,7 @@ MonoBehaviour:
   attacking: 0
   attack_cooldown: 1.1
   attack_lenght: 1.1
+  death_lenght: 1
 --- !u!114 &114183059049135170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2097,6 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: 100
   enemyMagic: 0
 --- !u!114 &114740748289092432
 MonoBehaviour:
