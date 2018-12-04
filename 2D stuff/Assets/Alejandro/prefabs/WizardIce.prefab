@@ -2342,6 +2342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magicNormal: {fileID: 1710537850431486, guid: 8551cf83b0e47704c99916b4184c3936,
+    type: 2}
+  magicIce: {fileID: 1807331641178912, guid: e192d50697d55e64297413278d0d773d, type: 2}
+  magicFire: {fileID: 1171254381821194, guid: fdc61954c59b14143a992cdb974b6bf1, type: 2}
 --- !u!114 &114400829738273646
 MonoBehaviour:
   m_ObjectHideFlags: 1
