@@ -21,8 +21,7 @@ public class MagicCollision : MonoBehaviour {
 
 		if (collision.CompareTag("Player"))
 		{
-			//collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
-			//Destroy(this.gameObject); //esto puede que no
+			collision.gameObject.GetComponent<AttackCalculate>().RecieveDamage(enemyReference.GetComponent<Enemy>());
 			//Debug.Log("hit"); 
 		}
 
