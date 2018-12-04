@@ -8,7 +8,7 @@ public class AttackCalculate : MonoBehaviour {
 	public LayerMask enemyLayer;
 	private CharacterController2D controller;
 	private Player player; 
-	private Health health;
+	public Health health;
 	public float kallumAtttackRange = 2f;
 	public Animator animator;
 	int direction;
@@ -17,6 +17,12 @@ public class AttackCalculate : MonoBehaviour {
 	void Start () {
 		controller = GetComponent<CharacterController2D>();
 		player = GetComponent<Player>();
+	}
+
+	void Update()
+	{
+		if (health.CurrentValue <= 0)
+			animator.SetBool("Death",true);
 	}
 
 	public void CalculateImpact ()

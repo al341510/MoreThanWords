@@ -2772,6 +2772,7 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  health: {fileID: 0}
   kallumAtttackRange: 2
   animator: {fileID: 95802769644456974}
 --- !u!114 &114545821379961512
