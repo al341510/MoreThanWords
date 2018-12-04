@@ -22,7 +22,7 @@ public class AttackCalculate : MonoBehaviour {
 	void Update()
 	{
 		if (health.CurrentValue <= 0)
-			animator.SetBool("Death",true);
+			SetDeathState();
 	}
 
 	public void CalculateImpact ()
@@ -123,5 +123,12 @@ public class AttackCalculate : MonoBehaviour {
 		animator.SetBool("AttackFail",true);
 		yield return new WaitForSeconds (0.3f);
 		animator.SetBool("AttackFail",false);
+	}
+
+	void SetDeathState()
+	{
+		animator.SetBool("Death", true);
+		this.gameObject.layer = 0;
+		this.gameObject.tag = "Untagged";
 	}
 }
