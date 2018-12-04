@@ -40,6 +40,8 @@ public class NPCPatrolMovement : MonoBehaviour {
 
     [SerializeField] private bool attacking;
 
+    bool cancelAttack;
+
     Attacker attacker;
 
     public float attack_cooldown = 1.1f; // Tiempo entre ataques
@@ -91,7 +93,7 @@ public class NPCPatrolMovement : MonoBehaviour {
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-
+        cancelAttack = false;
     }
 
     // Update is called once per frame
@@ -175,7 +177,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                         attacker.Attack(transform.position.x, transform.position.y, transform.rotation.y);
                         //Debug.Log(transform.rotation);
                         attacking = true;
-                        animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
+                        animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght && !cancelAttack);
                     }
                 }
             }
@@ -185,12 +187,12 @@ public class NPCPatrolMovement : MonoBehaviour {
         {
             horizontalMove = 0;
             timer -= Time.fixedDeltaTime;
-            animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght);
+            animator.SetBool("Attack", attacking && timer > attack_cooldown - attack_lenght && !cancelAttack);
             //this.GetComponent<Enemy>().CalculateImpact();
             if (timer<= 0)
             {
                 attacking = false;
-                animator.SetBool("Attack", attacking);
+                animator.SetBool("Attack", attacking && !cancelAttack);
                 timer = attack_cooldown;
             }
         }
@@ -206,5 +208,11 @@ public class NPCPatrolMovement : MonoBehaviour {
     {
         animator.SetBool("Death", true);
         status = "Death";
+    }
+
+    public void SetCancelAttack(bool ca)
+    {
+        cancelAttack = ca;
+        //print(ca);
     }
 }
