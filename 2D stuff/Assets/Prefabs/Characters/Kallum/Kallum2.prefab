@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 114432503709840746}
   - component: {fileID: 114530188696687058}
   - component: {fileID: 114076349181660528}
+  - component: {fileID: 114206402238584332}
   m_Layer: 10
   m_Name: Kallum
   m_TagString: Player
@@ -2503,6 +2504,20 @@ MonoBehaviour:
   m_SortingOrder: 0
   m_Bones: []
   m_BoneTransforms: []
+--- !u!114 &114206402238584332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313369044485026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbcdda838edff84b8381aaeecbf2d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 25
+  maxSpeed: 45
+  health: {fileID: 114844693355209774}
 --- !u!114 &114222304160165212
 MonoBehaviour:
   m_ObjectHideFlags: 1
