@@ -2517,7 +2517,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 25
   maxSpeed: 45
+  lastSpeed: 0
   health: {fileID: 114844693355209774}
+  maxHealth: 100
+  rb: {fileID: 0}
 --- !u!114 &114222304160165212
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -12,6 +12,8 @@ public class NPCGiantAttack : Attacker
     [SerializeField] private Player player;
     private AttackCalculate calculations;
     private RaycastHit2D hitInfo;
+    private float x;
+    private float y;
 
 
     void Start ()
@@ -19,33 +21,38 @@ public class NPCGiantAttack : Attacker
         calculations = player.GetComponent<AttackCalculate> ();
         controller = this.GetComponent<NPCPatrolController2D> ();
         playerLayer = LayerMask.GetMask ("Player");
-        giantAttackRange = 10;
     }
 
 
     public override void Attack (float x, float y, float direction)
     {
-        // Okay, I actually have no idea how this works.
+        this.x = x;
+        this.y = y;
+
+        Invoke ("CalculateImpact", 0.8f);
     }
 
 
     public void CalculateImpact ()
     {
-        if (controller.m_FacingRight) //direction of the ray
+        if (Vector2.Distance(new Vector2(x, y), new Vector2(player.transform.position.x, player.transform.position.y)) <= 3 && ((controller.m_FacingRight && player.transform.position.x >= x) || !controller.m_FacingRight && player.transform.position.x <= x))
         {
-            direction = 1;
-        }
-        else
-        {
-            direction = -1;
-        }
+            //Debug.Log("get Hit");
+            if (controller.m_FacingRight) //direction of the ray
+            {
+                direction = 1;
+            }
+            else
+            {
+                direction = -1;
+            }
 
-        hitInfo = Physics2D.Raycast (transform.position, Vector2.right * direction, giantAttackRange, playerLayer);
-        Debug.DrawRay (transform.position, Vector2.right, Color.green);
-        if (hitInfo.collider.gameObject.CompareTag("Player"))
-        {
-            calculations.RecieveDamage (this.GetComponent<Enemy> ());
-            print ("hit");
+            Vector3 position = transform.position;
+            position.y -= 30;
+
+            calculations.RecieveDamage(this.GetComponent<Enemy>());
+            //Invoke ("DoDamage", );
+            //print ("hit");
         }
     }
 }

@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1530877569125256
 GameObject:
   m_ObjectHideFlags: 1
@@ -414,7 +414,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517547951512122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.98, y: 3.42, z: -0.018256778}
+  m_LocalPosition: {x: -5.2840457, y: 3.3055325, z: -0.018256778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4918330102925848}
@@ -883,9 +883,9 @@ MonoBehaviour:
   maxX: 0
   player: {fileID: 0}
   attacking: 0
-  attack_cooldown: 1.1
-  attack_lenght: 1.1
-  death_lenght: 1
+  attack_cooldown: 3
+  attack_lenght: 1
+  death_lenght: 1.1
 --- !u!114 &114070936190775864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -956,6 +956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16a645decea8b643837b1406cbc21d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giantAttackRange: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  player: {fileID: 0}
 --- !u!114 &114178329120133808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1270,6 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: 150
   enemyMagic: 1
 --- !u!114 &114585554089894170
 MonoBehaviour:

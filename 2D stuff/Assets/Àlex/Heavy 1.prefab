@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: 100
   enemyMagic: 0
 --- !u!114 &114565660493897246
 MonoBehaviour:

@@ -440,7 +440,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227148213948050}
-  m_LocalRotation: {x: 0, y: 0, z: 0.46388185, w: 0.8858971}
+  m_LocalRotation: {x: 0, y: 0, z: 0.4638821, w: 0.885897}
   m_LocalPosition: {x: 1.1758199, y: -0.00000029802322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -689,7 +689,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870373335042666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.1108456, y: 4.0122013, z: -0.018256778}
+  m_LocalPosition: {x: -5.15, y: 2.26, z: -0.018256778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4087666812515972}
@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.1758199
+  m_Length: 1.1758202
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4014579624263596}
   m_AttachedIK: {fileID: 114447855971529906}
@@ -928,7 +928,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.07982946, w: 0.9968086}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -6.820016, y: 1.2811787, z: 0.060058594}
+    targetPosition: {x: -4.8591704, y: -0.4710226, z: 0.060058594}
     flip: 0
 --- !u!114 &114231328254152160
 MonoBehaviour:
@@ -957,6 +957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16a645decea8b643837b1406cbc21d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giantAttackRange: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  player: {fileID: 0}
 --- !u!114 &114294421986338542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1054,11 +1059,11 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 4014579624263596}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.46388185, w: 0.8858971}
+      solverRotation: {x: 0, y: 0, z: 0.4638821, w: 0.885897}
       defaultLocalRotation: {x: 0, y: 0, z: 0.271202, w: 0.96252245}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -9.380016, y: 1.5521789, z: 0.060058594}
+    targetPosition: {x: -7.4191704, y: -0.20002246, z: 0.060058594}
     flip: 0
 --- !u!114 &114496247264940184
 MonoBehaviour:
@@ -1109,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2673975
+  m_Length: 0.26739734
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4225051859319832}
   m_AttachedIK: {fileID: 0}
@@ -1189,9 +1194,9 @@ MonoBehaviour:
   maxX: 0
   player: {fileID: 0}
   attacking: 0
-  attack_cooldown: 1.1
-  attack_lenght: 1.1
-  death_lenght: 1
+  attack_cooldown: 3
+  attack_lenght: 1
+  death_lenght: 1.1
 --- !u!114 &114775978685343312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1203,6 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHealth: 150
   enemyMagic: 2
 --- !u!114 &114793063259388810
 MonoBehaviour:

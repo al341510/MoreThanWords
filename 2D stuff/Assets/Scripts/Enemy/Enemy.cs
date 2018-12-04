@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    int enemyHealth = 100;
+    public int enemyHealth = 100;
 	public enum enemyType {NEUTRAL, FIRE, ICE};
 	public enemyType enemyMagic;
     /*private NPCPatrolController2D controller;
