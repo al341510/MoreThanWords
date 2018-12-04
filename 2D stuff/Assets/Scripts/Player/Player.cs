@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
     private int keyOnMap;
 
     //numbers of the collected key
-    private int collectedKey = 0;
+    public int collectedKey = 0;
 
     float comboCDStart = 0.3f;
 	private float comboCD;

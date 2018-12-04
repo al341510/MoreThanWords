@@ -1,21 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerUpElements : MonoBehaviour {
 
     [SerializeField]
-    private bool destroy = true;
+    private bool destroy = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
+	[SerializeField]
+	private int cooldowntime = 3;
 
     void OnTriggerEnter2D(Collider2D other)
     {
