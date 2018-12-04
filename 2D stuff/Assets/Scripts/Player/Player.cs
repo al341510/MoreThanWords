@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Text keyNumber;
 
+	public GameObject powerUp;
+
     [SerializeField]
     private Image elementIcon;
 
@@ -65,12 +67,15 @@ public class Player : MonoBehaviour
 	public GameObject fireParticles;
 	public GameObject iceParticles;
 
+	public bool ElementFlag = false;
+
 	void Start()
 	{
 		AttackCalc = GetComponent<AttackCalculate>();
 		isAttacking = false;
 		comboCD = comboCDStart;
         health.setHealth(startHealth, startHealth);
+
     }
 
 	// Update is called once per frame
@@ -92,15 +97,15 @@ public class Player : MonoBehaviour
             // set element into storedMagic, depends on OntriggerEnter2D and Exit
             if (Input.GetButtonDown("PickUpMagic"))
             {
-
-                if (storedMagicFlag == "Fire")
-                {
-                    storedMagic = playerMagic.FIRE;
-                }
-                else if (storedMagicFlag == "Ice")
-                {
-                    storedMagic = playerMagic.ICE;
-                }
+				if (storedMagicFlag == "Fire")
+				{
+					StartCoroutine(DisablePowerUp(powerUp));
+					storedMagic = playerMagic.FIRE;
+				} else if (storedMagicFlag == "Ice")
+				{
+					StartCoroutine(DisablePowerUp(powerUp));
+					storedMagic = playerMagic.ICE;
+				}
             }
 
             if (isAttacking)
@@ -225,21 +230,27 @@ public class Player : MonoBehaviour
 
     
     //set Flag to the element where the player is staying at
-
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		powerUp = other.gameObject;
 		if (other.tag == "PowerUpFire")
 		{
-            storedMagicFlag = "Fire";
+			ElementFlag = true;
+			storedMagicFlag = "Fire";
+			ElementFlag = false;
 		}
 		if (other.tag == "PowerUpIce")
 		{
-            storedMagicFlag = "Ice";
+			ElementFlag = true;
+			storedMagicFlag = "Ice";
+			ElementFlag = false;
 		}
 	}
 
+
     // set flag to null by exit
     void OnTriggerExit2D() {
+		powerUp = null;
         storedMagicFlag = null;
     }
 
@@ -254,6 +265,11 @@ public class Player : MonoBehaviour
         set{ refreshMagic = value; }
     }
 
+	public int CollectedKey{
+		get{ return collectedKey; }
+		set{ collectedKey = value;}
+	}
+
     public bool GetPlayerIsCovering() //information for the enemies
     {
         return playerIsCovering;
@@ -265,4 +281,16 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds (4.5f);
         SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
     }
+
+	private IEnumerator DisablePowerUp(GameObject powerUp){
+		if (powerUp.tag == "PowerUpIce" && storedMagic.ToString() != "ICE" || powerUp.tag == "PowerUpFire" && storedMagic.ToString() != "FIRE" || storedMagic.ToString() == "NEUTRAL")
+		{
+			powerUp.SetActive(false);
+			storedMagicFlag = null;
+			//print("called");
+			yield return new WaitForSeconds(5f);
+			powerUp.SetActive(true);	
+		}
+
+	}
 }

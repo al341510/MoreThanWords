@@ -2334,6 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4483860f71c7944bdcec65f29b239f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!114 &114151672660010714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2460,10 +2461,13 @@ MonoBehaviour:
   storedMagic: 1
   magicTime: 20
   keyNumber: {fileID: 114547281610289824}
+  powerUp: {fileID: 0}
   elementIcon: {fileID: 0}
   keyOnMap: 3
+  collectedKey: 0
   fireParticles: {fileID: 1827630885423024}
   iceParticles: {fileID: 1107293546917518}
+  ElementFlag: 0
 --- !u!114 &114273433877475348
 MonoBehaviour:
   m_ObjectHideFlags: 1
