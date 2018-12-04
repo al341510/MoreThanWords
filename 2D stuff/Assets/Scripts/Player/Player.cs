@@ -213,6 +213,8 @@ public class Player : MonoBehaviour
         else
         {
             StartCoroutine (Respawn ());
+			horizontalMove = 0;
+			animator.SetFloat("VelocityY", 0); //cutre
         }
 	}
 
