@@ -36,3 +36,4 @@ sysinfo.txt
 *.unitypackage
 2D stuff/Assets/NPCPatrolMovement.cs.meta
 2D stuff/Assets/NPCPatrolController2D.cs.meta
+*.meta
