@@ -7,7 +7,7 @@ public class MagicCollision : MonoBehaviour {
 	private GameObject enemyReference;
 	// Use this for initialization
 	void Start () {
-		
+		Invoke ("DestroyObject", 1.5f);
 	}
 	
 	// Update is called once per frame
@@ -31,5 +31,9 @@ public class MagicCollision : MonoBehaviour {
 	public void SetEnemyReference(GameObject gameObject)
 	{
 		enemyReference = gameObject;
+	}
+
+	public void DestroyObject(){
+		GameObject.Destroy (gameObject);
 	}
 }

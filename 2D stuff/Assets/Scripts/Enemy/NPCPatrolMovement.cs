@@ -168,7 +168,7 @@ public class NPCPatrolMovement : MonoBehaviour {
                 controller.LookPlayer(this.transform.position.x, player.transform.position.x, attacking);
                 //HAY CONTACTO VISUAL ENTRE EL ARQUERO Y EL JUGADOR
                 linecast = Physics2D.Linecast(this.transform.position, player.transform.position, ~(1 << 9 | 1 << 11 | 1 << 12));
-                if(linecast.collider.gameObject.name == "Kallum")
+				if(linecast.collider.gameObject.tag == "Player")
                 {
                     if (!attacking && Mathf.Abs(Vector3.Distance(this.transform.position, player.transform.position)) < attackRange)
                     {

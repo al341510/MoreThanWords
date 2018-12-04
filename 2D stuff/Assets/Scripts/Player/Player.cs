@@ -88,13 +88,13 @@ public class Player : MonoBehaviour
 			}
 
 			// set element into storedMagic, depends on OntriggerEnter2D and Exit
-			if (Input.GetButtonDown("PickUpMagic")) {
+			if (Input.GetButtonDown("PickUpMagic"))
+			{
 
-				if(storedMagicFlag == "Fire")
+				if (storedMagicFlag == "Fire")
 				{
 					storedMagic = playerMagic.FIRE;
-				}
-				else if(storedMagicFlag == "Ice")
+				} else if (storedMagicFlag == "Ice")
 				{
 					storedMagic = playerMagic.ICE;
 				}
@@ -110,20 +110,18 @@ public class Player : MonoBehaviour
 					{
 						comboCD = comboCDStart;
 						animator.SetBool("AttackCombo", false); 
-					}					
-					else
+					} else
 					{
 						animator.SetBool("Attacking", false);
 						isAttacking = false;
 					}
 				}
-			}
-			else //isAttacking = false
+			} else //isAttacking = false
 				horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; //outside the if !cover to avoid keep moving when run and cover bug
 
 
 			animator.SetFloat("Speed", Mathf.Abs(horizontalMove)); 
-			animator.SetFloat("VelocityY",Rb.velocity.y); //detects the Y speed for jump animation
+			animator.SetFloat("VelocityY", Rb.velocity.y); //detects the Y speed for jump animation
 			bool jumpButton = Input.GetButtonDown("Jump");
 
 
@@ -133,25 +131,23 @@ public class Player : MonoBehaviour
          When activate magic, check storadMagic and use that magic, if same element is in use set refreshMagic as true (important for
          ElementIconEffect). After activating set storadmagig to Neutral
          */
-			if (useMagicButton) {
+			if (useMagicButton)
+			{
 				if (storedMagic.ToString() == "FIRE")
 				{
 					if (activeMagic.ToString() == "FIRE")
 					{
 						refreshMagic = true;
-					}
-					else
+					} else
 					{
 						activeMagic = playerMagic.FIRE;
 					}
-				}
-				else if(storedMagic.ToString() == "ICE")
+				} else if (storedMagic.ToString() == "ICE")
 				{
 					if (activeMagic.ToString() == "ICE")
 					{
 						refreshMagic = true;
-					}
-					else
+					} else
 					{
 						activeMagic = playerMagic.ICE;
 					}
@@ -176,8 +172,7 @@ public class Player : MonoBehaviour
 						isAttacking = true;
 						animator.SetBool("Attacking", true);
 						comboCD = comboCDStart;
-					}
-					else //if we press in the middle of an attack
+					} else //if we press in the middle of an attack
 					{
 						animator.SetBool("AttackCombo", true);
 					}
@@ -200,15 +195,11 @@ public class Player : MonoBehaviour
 				playerIsCovering = false;
 				animator.SetBool("IsCovering", false);
 			}
-
 		}
-
 	}
 
 	void FixedUpdate() 
 	{
-		if (!animator.GetBool("Death"))
-		{
 			// Trying to Limit Speed
 			if(Rb.velocity.magnitude > maxSpeed){
 				Rb.velocity = Vector3.ClampMagnitude(Rb.velocity, maxSpeed);
@@ -217,7 +208,6 @@ public class Player : MonoBehaviour
 			controller.Move(horizontalMove * Time.fixedDeltaTime, jump);
 			////fixedDeltaTime es el tiempo desde la ultima vez que se llamó a la funión (así funciona igual de bien independientemente de cada cuanto tiempo se llame a fixedUpdate (funciona igual a 30fps que a 60fps)
 			jump = false;
-		}
 	}
 
     
