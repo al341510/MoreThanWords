@@ -19,17 +19,32 @@ public class DoorControl : MonoBehaviour {
 			if (doorOpen) {
 				//solo cierra la puerta al tocar el jugador
 				animator.SetBool("openDoor", false);
-				StartCoroutine(NextLevel ()); //para cambiar de nivel
-			}
+
+                //Las puertas en cada nivel ahora tienen tags, con estas comparaciones iremos a otros niveles
+                if (gameObject.CompareTag("doorLevel0"))
+                {
+                    StartCoroutine(NextLevel("Level1")); //para cambiar de nivel
+                }
+                else if (gameObject.CompareTag("doorLevel1"))
+                {
+                    StartCoroutine(NextLevel("Level2")); //para cambiar de nivel
+                }
+                else if (gameObject.CompareTag("doorLevel2"))
+                {
+                    StartCoroutine(NextLevel("Level3")); //para cambiar de nivel
+                }
+
+
+            }
 		}
 
 	}
 
-	IEnumerator NextLevel(){
+	IEnumerator NextLevel(string destiny){
 		//Tiene una espera para hacer una transicion
 
 		yield return new WaitForSeconds (2);
 
-		SceneManager.LoadScene ("TrueLevel2"); //Cambiar por el siguiente nivel cuando este
+		SceneManager.LoadScene (destiny); //Cambiar por el siguiente nivel cuando este
 	}
 }

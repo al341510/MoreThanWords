@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,8 @@ public class ArrowForce : MonoBehaviour {
     float y;
     [SerializeField] Rigidbody2D rb;
     private bool launched;
+    public bool updateRotation;
+    public float lastAngle;
 
     private void Start()
     {
@@ -21,6 +24,7 @@ public class ArrowForce : MonoBehaviour {
 
     private void Awake()
     {
+        updateRotation = true;
         launched = false;
         rb = this.GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
@@ -46,6 +50,15 @@ public class ArrowForce : MonoBehaviour {
         this.transform.rotation *= rotation;
     }
 
+    internal void UpdateLastAngle()
+    {
+        if (updateRotation)
+        {
+            lastAngle = angle;
+            updateRotation = false;
+        }
+    }
+
     void LaunchArrow()
     {
         launched = true;
@@ -55,8 +68,17 @@ public class ArrowForce : MonoBehaviour {
 
     void UpdateAngle()
     {
-        rotation = Quaternion.Euler(0, 0, Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y, rb.velocity.x));
-        this.transform.rotation = rotation;
+        if (updateRotation)
+        {
+            angle = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y, rb.velocity.x);
+            rotation = Quaternion.Euler(0, 0, angle);
+            this.transform.rotation = rotation;
+        }
+        else
+        {
+            rotation = Quaternion.Euler(0, 0, lastAngle);
+            this.transform.rotation = rotation;
+        }
     }
 
     public void SetAngle(float angle)

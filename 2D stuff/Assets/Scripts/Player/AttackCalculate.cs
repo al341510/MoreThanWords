@@ -81,7 +81,7 @@ public class AttackCalculate : MonoBehaviour {
 	}
 
 
-	void RecieveDamage (Enemy enemy) //not already in use, this is for the enemies in a future
+	public void RecieveDamage (Enemy enemy) //not already in use, this is for the enemies in a future
 	{
 		int damage;
 		switch (enemy.enemyMagic)
