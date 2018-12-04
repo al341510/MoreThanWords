@@ -268,7 +268,8 @@ GameObject:
   - component: {fileID: 61519310412516114}
   - component: {fileID: 114068654295515314}
   - component: {fileID: 114253077797382060}
-  - component: {fileID: 114352576845021368}
+  - component: {fileID: 114303784188747642}
+  - component: {fileID: 114585452143631190}
   m_Layer: 9
   m_Name: WizardFire
   m_TagString: Untagged
@@ -2337,6 +2338,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4229961094364776}
   m_AttachedIK: {fileID: 114244133539831268}
+--- !u!114 &114303784188747642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209849519445660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMagic: 1
 --- !u!114 &114308730414050734
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2369,18 +2382,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114352576845021368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1209849519445660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mType: 2
 --- !u!114 &114357714954468150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2580,6 +2581,17 @@ MonoBehaviour:
   m_Bones: []
   m_BoneTransforms:
   - {fileID: 4518925032038070}
+--- !u!114 &114585452143631190
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1209849519445660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114586627683441448
 MonoBehaviour:
   m_ObjectHideFlags: 1

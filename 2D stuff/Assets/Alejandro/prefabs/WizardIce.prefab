@@ -491,7 +491,8 @@ GameObject:
   - component: {fileID: 61401682477927344}
   - component: {fileID: 114995194032665344}
   - component: {fileID: 114513878262507122}
-  - component: {fileID: 114203950463607240}
+  - component: {fileID: 114386773305318704}
+  - component: {fileID: 114496700473033286}
   m_Layer: 9
   m_Name: WizardIce
   m_TagString: Untagged
@@ -2112,18 +2113,6 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
---- !u!114 &114203950463607240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1533784918637408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mType: 1
 --- !u!114 &114221948196987260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2342,6 +2331,17 @@ MonoBehaviour:
     m_RestoreDefaultPose: 1
     targetPosition: {x: -0.19708669, y: -3.8420248, z: 0.09723119}
     flip: 1
+--- !u!114 &114386773305318704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533784918637408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ad0112dec39f1e4e97cf945cdf69023, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114400829738273646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2484,6 +2484,18 @@ MonoBehaviour:
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 0}
   m_AttachedIK: {fileID: 0}
+--- !u!114 &114496700473033286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533784918637408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4981efc5c7a724e4eb1a5254c0869cb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMagic: 2
 --- !u!114 &114513878262507122
 MonoBehaviour:
   m_ObjectHideFlags: 1
