@@ -13,6 +13,7 @@ TagManager:
   - doorLevel2
   - doorLevel1
   - doorLevel0
+  - doorLevel3
   layers:
   - Default
   - TransparentFX

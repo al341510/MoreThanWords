@@ -1519,7 +1519,7 @@ MonoBehaviour:
   maxX: 0
   player: {fileID: 0}
   attacking: 0
-  attack_cooldown: 1.1
+  attack_cooldown: 2
   attack_lenght: 1.1
   death_lenght: 1
 --- !u!114 &114032027172141780

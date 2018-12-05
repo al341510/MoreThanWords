@@ -16,11 +16,11 @@ public class ChaptersMenu : MonoBehaviour
 
     void Awake ()
     {
-        //if (GameController.gameController.CheckLastUnlocked () == 1)
-        //{
+        /*if (GameController.gameController.CheckLastUnlocked () == 1)
+        {
             chapter2 = GameObject.Find("Chapter2But").GetComponent<Button> ();
             chapter2.interactable = false;
-        //}
+        }*/
     }
 
 

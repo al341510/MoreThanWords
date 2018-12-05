@@ -213,7 +213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1530877569125256
 GameObject:
   m_ObjectHideFlags: 1
@@ -959,7 +959,7 @@ MonoBehaviour:
   giantAttackRange: 3
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   player: {fileID: 0}
 --- !u!114 &114178329120133808
 MonoBehaviour:

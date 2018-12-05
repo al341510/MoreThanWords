@@ -33,6 +33,10 @@ public class DoorControl : MonoBehaviour {
                 {
                     StartCoroutine(NextLevel("Level3")); //para cambiar de nivel
                 }
+                else if (gameObject.CompareTag("doorLevel3"))
+                {
+                    StartCoroutine(NextLevel("Menu")); //para cambiar de nivel
+                }
 
 
             }
