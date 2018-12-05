@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController gameController;
 
-    [SerializeField] private GameObject mainMenu, optionsMainMenu, chaptersMainMenu;
+    [SerializeField] private GameObject mainMenu, optionsMainMenu, chaptersMainMenu, instructionsMainMenu;
 
     private Button load, chapters;
 
@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
         mainMenu.SetActive(true);
         optionsMainMenu.SetActive(false);
         chaptersMainMenu.SetActive(false);
+        instructionsMainMenu.SetActive (false);
 
         if (gameController == null)
         {
@@ -58,9 +59,9 @@ public class GameController : MonoBehaviour
         {
             load = GameObject.Find("ContinueBut").GetComponent<Button>();
             load.interactable = false;
-            chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
+            /*chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
             chapters.interactable = false;
-            //noSettings = true;
+            noSettings = true;*/
         }
         /*else
         {
@@ -170,8 +171,8 @@ public class GameController : MonoBehaviour
             File.Delete(saveLocation);
             load = GameObject.Find("ContinueBut").GetComponent<Button>();
             load.interactable = false;
-            chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
-            chapters.interactable = false;
+            //chapters = GameObject.Find("ChaptersBut").GetComponent<Button>();
+            //chapters.interactable = false;
         }
     }
 
