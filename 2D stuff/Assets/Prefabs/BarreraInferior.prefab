@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4345802327682918}
   - component: {fileID: 61539319167096394}
-  - component: {fileID: 114390147437087842}
+  - component: {fileID: 114549133299422232}
   m_Layer: 0
   m_Name: BarreraInferior
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156810793149082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6, y: -65.7, z: -0.1953125}
+  m_LocalPosition: {x: 1.5273409, y: -86.0104, z: -0.1953125}
   m_LocalScale: {x: 166.4095, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,7 +66,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114390147437087842
+--- !u!114 &114549133299422232
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,6 +74,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1156810793149082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33cd69c040c6ea43a290de6ed62a785, type: 3}
+  m_Script: {fileID: 11500000, guid: 12f7f2cc8a8e22049a9a6c5e486c1088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
