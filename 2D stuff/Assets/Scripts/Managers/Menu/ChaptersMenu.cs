@@ -11,17 +11,17 @@ using UnityEngine;
 
 public class ChaptersMenu : MonoBehaviour
 {
-    /*private Button chapter2;
+    private Button chapter2;
 
 
     void Awake ()
     {
-        if (GameController.gameController.CheckLastUnlocked () == 1)
-        {
+        //if (GameController.gameController.CheckLastUnlocked () == 1)
+        //{
             chapter2 = GameObject.Find("Chapter2But").GetComponent<Button> ();
             chapter2.interactable = false;
-        }
-    }*/
+        //}
+    }
 
 
     private void LoadLevel (int level)

@@ -12,15 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/TestEnemies.unity
     guid: c673a41dda3c21648baf80b8b3791732
   - enabled: 1
-    path: "Assets/\xC0lex/Level0Beltran.unity"
-    guid: 2d716293361a5e2458119696b476438d
+    path: Assets/Scenes/Official/Level0.unity
+    guid: a1a5d3e005c9ab5438c7ebce73406625
   - enabled: 1
     path: Assets/Scenes/Official/Level1.unity
     guid: 5870d032e61884c4e98404a7707918a4
   - enabled: 1
     path: Assets/Scenes/Official/Level2.unity
     guid: 84f198229cfaf4041bb4b1e9d5c5d96e
+  - enabled: 1
+    path: Assets/Scenes/Official/Level3.unity
+    guid: 9ef9f2073120e0f41be790cdb7df156b
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/ad32481896ee94144a63e3fa213809cd
-    guid: ad32481896ee94144a63e3fa213809cd
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
